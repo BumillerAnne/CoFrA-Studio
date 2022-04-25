@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="modellingFrameworkContext4Authentication" nsURI="http://www.example.org/modellingFrameworkContext4Authentication"
+    nsPrefix="modellingFrameworkContext4Authentication">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="ContextInformation" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="Specification"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="Specification" value="self.context->notEmpty()"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="history" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="privacy" eType="#//PrivacyKinds"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="environment" upperBound="-1"
+        eType="#//EnvironmentKinds"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RequiredContextInformation" eSuperTypes="#//ContextInformation">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="Specification HistoryCheck PrivacyCheck EnvironmentCheck"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="Specification" value="self.context->notEmpty()"/>
+      <details key="HistoryCheck" value="self.contextthreatalgo->forAll(a|a.history=self.history)"/>
+      <details key="PrivacyCheck" value="self.contextthreatalgo.threatsituation.threatriskalgo.risk.authenticationmechanism->forAll(a|a.privacy=self.privacy)"/>
+      <details key="EnvironmentCheck" value="self.contextthreatalgo.threatsituation.threatriskalgo.risk.authenticationmechanism ->includesAll(self.environment)"/>
+    </eAnnotations>
+    <eOperations name="WhatThreat" ordered="false" upperBound="-1" eType="#//ThreatSituation">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="body" value="self.contextthreatalgo.threatsituation->asSet() "/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/OCL/Collection">
+        <details key="nullFree" value="false"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="WhatRisk" ordered="false" upperBound="-1" eType="#//Risk">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="body" value="self.contextthreatalgo.threatsituation.threatriskalgo.risk->asSet() "/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/OCL/Collection">
+        <details key="nullFree" value="false"/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="availablecontextinformation"
+        eType="#//AvailableContextInformation" eOpposite="#//AvailableContextInformation/requiredcontextinformation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contextthreatalgo" upperBound="-1"
+        eType="#//ContextThreatAlgo" eOpposite="#//ContextThreatAlgo/requiredcontextinformation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ThreatSituation">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="Specification"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="Specification" value="self.threat->notEmpty()"/>
+    </eAnnotations>
+    <eOperations name="WhatContextInformation" ordered="false" upperBound="-1" eType="#//RequiredContextInformation">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="body" value="self.contextthreatalgo.requiredcontextinformation->asSet() "/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/OCL/Collection">
+        <details key="nullFree" value="false"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="WhatRisk" ordered="false" upperBound="-1" eType="#//Risk">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="body" value="self.threatriskalgo.risk->asSet() "/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/OCL/Collection">
+        <details key="nullFree" value="false"/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contextthreatalgo" upperBound="-1"
+        eType="#//ContextThreatAlgo" eOpposite="#//ContextThreatAlgo/threatsituation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="threatriskalgo" upperBound="-1"
+        eType="#//ThreatRiskAlgo" eOpposite="#//ThreatRiskAlgo/threatsituation"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="threat" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Risk">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="FactorCheck Specification"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="FactorCheck" value="self.authenticationmechanism->forAll(a|a.factor&lt;>self.factor)"/>
+      <details key="Specification" value="self.fearedEvent->notEmpty()"/>
+    </eAnnotations>
+    <eOperations name="WhatAuthentication" ordered="false" upperBound="-1" eType="#//AuthenticationMechanism">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="body" value="self.authenticationmechanism->asSet() "/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/OCL/Collection">
+        <details key="nullFree" value="false"/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="threatriskalgo" upperBound="-1"
+        eType="#//ThreatRiskAlgo" eOpposite="#//ThreatRiskAlgo/risk"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fearedEvent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="factor" upperBound="-1"
+        eType="#//FactorKinds"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="authenticationmechanism"
+        upperBound="-1" eType="#//AuthenticationMechanism" eOpposite="#//AuthenticationMechanism/risk"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AuthenticationMechanism">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="UsabilityCheck UsabilityCheck2 Specification"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="UsabilityCheck" value="AuthenticationMechanism.allInstances()->select(a|a.factor=0)->asSet().usability&lt;>0"/>
+      <details key="UsabilityCheck2" value="AuthenticationMechanism.allInstances()->select(a|a.factor=1)->asSet().usability&lt;>1"/>
+      <details key="Specification" value="self.mechanism->notEmpty()"/>
+    </eAnnotations>
+    <eOperations name="WhatRisk" ordered="false" upperBound="-1" eType="#//Risk">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="body" value="self.risk->asSet() "/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/OCL/Collection">
+        <details key="nullFree" value="false"/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mechanism" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="usability" upperBound="-1"
+        eType="#//UsabilityKinds"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deployability" upperBound="-1"
+        eType="#//DeployabilityKinds"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="factor" upperBound="-1"
+        eType="#//FactorKinds"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="efficiencyToUse" upperBound="-1"
+        eType="#//EnvironmentKinds"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="privacy" eType="#//PrivacyKinds"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="risk" upperBound="-1" eType="#//Risk"
+        eOpposite="#//Risk/authenticationmechanism"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AvailableContextInformation" eSuperTypes="#//ContextInformation">
+    <eOperations name="WhatThreatSituation" ordered="false" upperBound="-1" eType="#//ThreatSituation">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="body" value="self.requiredcontextinformation.contextthreatalgo.threatsituation->asSet() "/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/OCL/Collection">
+        <details key="nullFree" value="false"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="WhatRequiredInfo" ordered="false" upperBound="-1" eType="#//RequiredContextInformation">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="body" value="self.requiredcontextinformation->asSet() "/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/OCL/Collection">
+        <details key="nullFree" value="false"/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredcontextinformation"
+        eType="#//RequiredContextInformation" eOpposite="#//RequiredContextInformation/availablecontextinformation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContextThreatAlgo">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="Specification"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="Specification" value="self.algo->notEmpty()"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="threatsituation" upperBound="-1"
+        eType="#//ThreatSituation" eOpposite="#//ThreatSituation/contextthreatalgo"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="algo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="history" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredcontextinformation"
+        upperBound="-1" eType="#//RequiredContextInformation" eOpposite="#//RequiredContextInformation/contextthreatalgo"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ThreatRiskAlgo">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="Specification"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="Specification" value="self.algo->notEmpty()"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="threatsituation" upperBound="-1"
+        eType="#//ThreatSituation" eOpposite="#//ThreatSituation/threatriskalgo"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="risk" upperBound="-1" eType="#//Risk"
+        eOpposite="#//Risk/threatriskalgo"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="algo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EnvironmentKinds">
+    <eLiterals name="noise"/>
+    <eLiterals name="darkness" value="1"/>
+    <eLiterals name="activity" value="2"/>
+    <eLiterals name="sourrounded" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PrivacyKinds">
+    <eLiterals name="low"/>
+    <eLiterals name="medium" value="1"/>
+    <eLiterals name="high" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="FactorKinds">
+    <eLiterals name="knowledge"/>
+    <eLiterals name="possession" value="1"/>
+    <eLiterals name="being" value="2"/>
+    <eLiterals name="doing" value="3"/>
+    <eLiterals name="human" value="4"/>
+    <eLiterals name="personal" value="5"/>
+    <eLiterals name="location" value="6"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="UsabilityKinds">
+    <eLiterals name="MemorywiseEffortless"/>
+    <eLiterals name="NothingToCarry" value="1"/>
+    <eLiterals name="NoAdditionalNetworkAccess" value="2"/>
+    <eLiterals name="FrictionlessSetup" value="3"/>
+    <eLiterals name="AffinityToUser" value="4"/>
+    <eLiterals name="EaseToUse" value="5"/>
+    <eLiterals name="EaseToLearn" value="6"/>
+    <eLiterals name="EaseToRecover" value="7"/>
+    <eLiterals name="Reliability" value="8"/>
+    <eLiterals name="UserChoice" value="9"/>
+    <eLiterals name="ScalableForUsers" value="10"/>
+    <eLiterals name="PhysicallyEffortless" value="11"/>
+    <eLiterals name="InfrequentErrors" value="12"/>
+    <eLiterals name="NotToComplex" value="13"/>
+    <eLiterals name="EfficientToUse" value="14"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DeployabilityKinds">
+    <eLiterals name="Accessible"/>
+    <eLiterals name="NegligibleCostsPerUser" value="1"/>
+    <eLiterals name="ServerCompatible" value="2"/>
+    <eLiterals name="BrowserCompatible" value="3"/>
+    <eLiterals name="Mature" value="4"/>
+    <eLiterals name="NonProprietary" value="5"/>
+    <eLiterals name="ImplementationCosts" value="6"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModellingFramework">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contextinformation" upperBound="-1"
+        eType="#//ContextInformation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contextthreatalgo" upperBound="-1"
+        eType="#//ContextThreatAlgo" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="threatsituation" upperBound="-1"
+        eType="#//ThreatSituation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="threatriskalgo" upperBound="-1"
+        eType="#//ThreatRiskAlgo" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="authenticationmechanism"
+        upperBound="-1" eType="#//AuthenticationMechanism" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="risk" upperBound="-1" eType="#//Risk"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredcontextinformation"
+        upperBound="-1" eType="#//RequiredContextInformation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="availablecontextinformation"
+        upperBound="-1" eType="#//AvailableContextInformation" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>
