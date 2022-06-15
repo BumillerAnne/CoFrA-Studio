@@ -1,9 +1,13 @@
-	abstract class ContextInformation
+	package coFrA_ModellingFramework : coFrA_ModellingFramework = 'http://www.example.org/coFrA_ModellingFramework'
+{
+	class ContextInformation
 	{
 		attribute context : String[?];
 		attribute history : Boolean[1];
-		attribute privacy : PrivacyKinds[?];
-		attribute environment : EnvironmentKinds[*|1] { ordered };
+		property qualitykinds : QualityKinds[?];
+		property frequencykinds : FrequencyKinds[?];
+		property privacykinds : PrivacyKinds[?];
+		property environmentkinds : EnvironmentKinds[*|1] { ordered };
 		invariant Specification: self.context->notEmpty();
 	}
 	class RequiredContextInformation extends ContextInformation
@@ -16,14 +20,34 @@
 		{
 			body: self.contextthreatalgo.threatsituation.threatriskalgo.risk->asSet() ;
 		}
-		property availablecontextinformation#requiredcontextinformation : AvailableContextInformation[?];
 		property contextthreatalgo#requiredcontextinformation : ContextThreatAlgo[*|1] { ordered };
+		property availablecontextinformation#requiredcontextinformation : AvailableContextInformation[?];
 		invariant Specification: self.context->notEmpty();
 		invariant HistoryCheck: self.contextthreatalgo->forAll(a|a.history=self.history);
 		invariant
-		PrivacyCheck: self.contextthreatalgo.threatsituation.threatriskalgo.risk.authenticationmechanism->forAll(a|a.privacy=self.privacy);
+		PrivacyCheck: self.contextthreatalgo.threatsituation.threatriskalgo.risk.authenticationmechanism->forAll(a|a.privacykinds=self.privacykinds);
 		invariant
-		EnvironmentCheck: self.contextthreatalgo.threatsituation.threatriskalgo.risk.authenticationmechanism ->includesAll(self.environment);
+		EnvironmentCheck: self.contextthreatalgo.threatsituation.threatriskalgo.risk.authenticationmechanism ->includesAll(self.environmentkinds);
+	}
+	class AvailableContextInformation extends ContextInformation
+	{
+		operation WhatThreatSituation() : ThreatSituation[*]
+		{
+			body: self.requiredcontextinformation.contextthreatalgo.threatsituation->asSet() ;
+		}
+		operation WhatRequiredInfo() : RequiredContextInformation[*]
+		{
+			body: self.requiredcontextinformation->asSet() ;
+		}
+		property requiredcontextinformation#availablecontextinformation : RequiredContextInformation[?];
+	}
+	class ContextThreatAlgo
+	{
+		property requiredcontextinformation#contextthreatalgo : RequiredContextInformation[*|1] { ordered };
+		property threatsituation#contextthreatalgo : ThreatSituation[*|1] { ordered };
+		attribute algo : String[?];
+		attribute history : Boolean[1];
+		invariant Specification: self.algo->notEmpty();
 	}
 	class ThreatSituation
 	{
@@ -40,6 +64,13 @@
 		attribute threat : String[?];
 		invariant Specification: self.threat->notEmpty();
 	}
+	class ThreatRiskAlgo
+	{
+		property threatsituation#threatriskalgo : ThreatSituation[*|1] { ordered };
+		property risk#threatriskalgo : Risk[*|1] { ordered };
+		attribute algo : String[?];
+		invariant Specification: self.algo->notEmpty();
+	}
 	class Risk
 	{
 		operation WhatAuthentication() : AuthenticationMechanism[*]
@@ -47,10 +78,10 @@
 			body: self.authenticationmechanism->asSet() ;
 		}
 		property threatriskalgo#risk : ThreatRiskAlgo[*|1] { ordered };
-		attribute fearedEvent : String[?];
-		attribute factor : FactorKinds[*|1] { ordered };
 		property authenticationmechanism#risk : AuthenticationMechanism[*|1] { ordered };
-		invariant FactorCheck: self.authenticationmechanism->forAll(a|a.factor<>self.factor);
+		attribute fearedEvent : String[?];
+		property factorkinds : FactorKinds[*|1] { ordered };
+		invariant FactorCheck: self.authenticationmechanism->forAll(a|a.factorkinds<>self.factorkinds);
 		invariant Specification: self.fearedEvent->notEmpty();
 	}
 	class AuthenticationMechanism
@@ -59,104 +90,52 @@
 		{
 			body: self.risk->asSet() ;
 		}
-		attribute mechanism : String[?];
-		attribute usability : UsabilityKinds[*|1] { ordered };
-		attribute deployability : DeployabilityKinds[*|1] { ordered };
-		attribute factor : FactorKinds[*|1] { ordered };
-		attribute efficiencyToUse : EnvironmentKinds[*|1] { ordered };
-		attribute privacy : PrivacyKinds[?];
 		property risk#authenticationmechanism : Risk[*|1] { ordered };
-		invariant UsabilityCheck: AuthenticationMechanism.allInstances()->select(a|a.factor=0)->asSet().usability<>0;
-		invariant UsabilityCheck2: AuthenticationMechanism.allInstances()->select(a|a.factor=1)->asSet().usability<>1;
+		attribute mechanism : String[?];
+		property environmentkinds : EnvironmentKinds[*|1] { ordered };
+		property deployabilitykinds : DeployabilityKinds[*|1] { ordered };
+		property usabilitykinds : UsabilityKinds[*|1] { ordered };
+		property factorkinds : FactorKinds[*|1] { ordered };
+		property qualitykinds : QualityKinds[?];
+		property privacykinds : PrivacyKinds[?];
+		invariant
+		UsabilityCheck: AuthenticationMechanism.allInstances()->select(a|a.factorkinds=0)->asSet().usabilitykinds<>0;
+		invariant
+		UsabilityCheck2: AuthenticationMechanism.allInstances()->select(a|a.factorkinds=1)->asSet().usabilitykinds<>1;
 		invariant Specification: self.mechanism->notEmpty();
 	}
-	class AvailableContextInformation extends ContextInformation
+	class CoFrA
 	{
-		operation WhatThreatSituation() : ThreatSituation[*]
-		{
-			body: self.requiredcontextinformation.contextthreatalgo.threatsituation->asSet() ;
-		}
-		operation WhatRequiredInfo() : RequiredContextInformation[*]
-		{
-			body: self.requiredcontextinformation->asSet() ;
-		}
-		property requiredcontextinformation#availablecontextinformation : RequiredContextInformation[?];
+		property contextinformation : ContextInformation[?];
+		property contextthreatalgo : ContextThreatAlgo[?];
+		property threatriskalgo : ThreatRiskAlgo[?];
+		property threatsituation : ThreatSituation[?];
+		property risk : Risk[?];
+		property authenticationmechanism : AuthenticationMechanism[?];
 	}
-	class ContextThreatAlgo
+	class QualityKinds
 	{
-		property threatsituation#contextthreatalgo : ThreatSituation[*|1] { ordered };
-		attribute algo : String[?];
-		attribute history : Boolean[1];
-		property requiredcontextinformation#contextthreatalgo : RequiredContextInformation[*|1] { ordered };
-		invariant Specification: self.algo->notEmpty();
+		attribute value : String[?];
 	}
-	class ThreatRiskAlgo
+	class FrequencyKinds
 	{
-		property threatsituation#threatriskalgo : ThreatSituation[*|1] { ordered };
-		property risk#threatriskalgo : Risk[*|1] { ordered };
-		attribute algo : String[?];
-		invariant Specification: self.algo->notEmpty();
+		attribute value : String[?];
 	}
-	enum EnvironmentKinds { serializable }
+	class PrivacyKinds
 	{
-		literal noise;
-		literal darkness = 1;
-		literal activity = 2;
-		literal sourrounded = 3;
+		attribute value : String[?];
 	}
-	enum PrivacyKinds { serializable }
+	class EnvironmentKinds
 	{
-		literal low;
-		literal medium = 1;
-		literal high = 2;
+		attribute value : String[?];
 	}
-	enum FactorKinds { serializable }
+	class UsabilityKinds;
+	class DeployabilityKinds
 	{
-		literal knowledge;
-		literal possession = 1;
-		literal being = 2;
-		literal doing = 3;
-		literal human = 4;
-		literal personal = 5;
-		literal location = 6;
+		attribute value : String[?];
 	}
-	enum UsabilityKinds { serializable }
+	class FactorKinds
 	{
-		literal MemorywiseEffortless;
-		literal NothingToCarry = 1;
-		literal NoAdditionalNetworkAccess = 2;
-		literal FrictionlessSetup = 3;
-		literal AffinityToUser = 4;
-		literal EaseToUse = 5;
-		literal EaseToLearn = 6;
-		literal EaseToRecover = 7;
-		literal Reliability = 8;
-		literal UserChoice = 9;
-		literal ScalableForUsers = 10;
-		literal PhysicallyEffortless = 11;
-		literal InfrequentErrors = 12;
-		literal NotToComplex = 13;
-		literal EfficientToUse = 14;
-	}
-	enum DeployabilityKinds { serializable }
-	{
-		literal Accessible;
-		literal NegligibleCostsPerUser = 1;
-		literal ServerCompatible = 2;
-		literal BrowserCompatible = 3;
-		literal Mature = 4;
-		literal NonProprietary = 5;
-		literal ImplementationCosts = 6;
-	}
-	class ModellingFramework
-	{
-		property contextinformation : ContextInformation[*|1] { ordered composes };
-		property contextthreatalgo : ContextThreatAlgo[*|1] { ordered composes };
-		property threatsituation : ThreatSituation[*|1] { ordered composes };
-		property threatriskalgo : ThreatRiskAlgo[*|1] { ordered composes };
-		property authenticationmechanism : AuthenticationMechanism[*|1] { ordered composes };
-		property risk : Risk[*|1] { ordered composes };
-		property requiredcontextinformation : RequiredContextInformation[*|1] { ordered composes };
-		property availablecontextinformation : AvailableContextInformation[*|1] { ordered composes };
+		attribute value : String[?];
 	}
 }
