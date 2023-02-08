@@ -1,0 +1,16 @@
+# List of desired criteria for authentication systems that the experts mentioned during the survey:
+- simplicity of the authentication mechanisms
+- familarity of the user with the authentication mechanisms
+- number of different authentication mechanisms
+- number of authnetications in a path
+- availability of the authentication mechanisms
+- universality of the authentication mechanisms (adapted to ecosystem)
+- sensivity of the service
+- implementation costs
+- durability of the authetication mechanisms
+- environment
+- battery usage
+- quality of support for the use of the authentication mechanisms
+- time performance
+- maintainability
+
