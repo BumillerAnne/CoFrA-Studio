@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modellingFrameworkContext4Authentication:ModellingFramework
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:modellingFrameworkContext4Authentication="http://www.example.org/modellingFrameworkContext4Authentication"
+    xsi:schemaLocation="http://www.example.org/modellingFrameworkContext4Authentication modellingFrameworkContext4Authentication.ecore">
+  <contextinformation
+      xsi:type="modellingFrameworkContext4Authentication:RequiredContextInformation"
+      context="device"
+      history="true"
+      availablecontextinformation="//@contextinformation.4"
+      contextthreatalgo="//@contextthreatalgo.0"/>
+  <contextinformation
+      xsi:type="modellingFrameworkContext4Authentication:RequiredContextInformation"
+      context="time"
+      history="true"
+      privacy="medium"
+      availablecontextinformation="//@contextinformation.7"
+      contextthreatalgo="//@contextthreatalgo.1 //@contextthreatalgo.4"/>
+  <contextinformation
+      xsi:type="modellingFrameworkContext4Authentication:RequiredContextInformation"
+      context="IP"
+      history="true"
+      privacy="high"
+      availablecontextinformation="//@contextinformation.5"
+      contextthreatalgo="//@contextthreatalgo.2"/>
+  <contextinformation
+      xsi:type="modellingFrameworkContext4Authentication:RequiredContextInformation"
+      context="location"
+      history="true"
+      availablecontextinformation="//@contextinformation.6"
+      contextthreatalgo="//@contextthreatalgo.3 //@contextthreatalgo.1"/>
+  <contextinformation
+      xsi:type="modellingFrameworkContext4Authentication:AvailableContextInformation"
+      context="device"
+      requiredcontextinformation="//@contextinformation.0"/>
+  <contextinformation
+      xsi:type="modellingFrameworkContext4Authentication:AvailableContextInformation"
+      context="IP"
+      privacy="high"
+      requiredcontextinformation="//@contextinformation.2"/>
+  <contextinformation
+      xsi:type="modellingFrameworkContext4Authentication:AvailableContextInformation"
+      context="location"
+      requiredcontextinformation="//@contextinformation.3"/>
+  <contextinformation
+      xsi:type="modellingFrameworkContext4Authentication:AvailableContextInformation"
+      context="time"
+      privacy="medium"
+      requiredcontextinformation="//@contextinformation.1"/>
+  <contextthreatalgo
+      threatsituation="//@threatsituation.1"
+      algo="algo1"
+      history="true"
+      requiredcontextinformation="//@contextinformation.0"/>
+  <contextthreatalgo
+      threatsituation="//@threatsituation.3"
+      algo="algo2"
+      history="true"
+      requiredcontextinformation="//@contextinformation.1 //@contextinformation.3"/>
+  <contextthreatalgo
+      threatsituation="//@threatsituation.2"
+      algo="algo3"
+      history="true"
+      requiredcontextinformation="//@contextinformation.2"/>
+  <contextthreatalgo
+      threatsituation="//@threatsituation.0"
+      algo="algo4"
+      history="true"
+      requiredcontextinformation="//@contextinformation.3"/>
+  <contextthreatalgo
+      threatsituation="//@threatsituation.4"
+      algo="algo5"
+      history="true"
+      requiredcontextinformation="//@contextinformation.1"/>
+  <threatsituation
+      contextthreatalgo="//@contextthreatalgo.3"
+      threatriskalgo="//@threatriskalgo.1"
+      threat="newLocation"/>
+  <threatsituation
+      contextthreatalgo="//@contextthreatalgo.0"
+      threatriskalgo="//@threatriskalgo.0"
+      threat="newDevice"/>
+  <threatsituation
+      contextthreatalgo="//@contextthreatalgo.2"
+      threatriskalgo="//@threatriskalgo.0"
+      threat="newIP"/>
+  <threatsituation
+      contextthreatalgo="//@contextthreatalgo.1"
+      threatriskalgo="//@threatriskalgo.2 //@threatriskalgo.4"
+      threat="fastLocationChange"/>
+  <threatsituation
+      contextthreatalgo="//@contextthreatalgo.4"
+      threatriskalgo="//@threatriskalgo.3"
+      threat="SuspiciousTimeDIffVar"/>
+  <threatriskalgo
+      threatsituation="//@threatsituation.1 //@threatsituation.2"
+      risk="//@risk.1"
+      algo="algoA"/>
+  <threatriskalgo
+      threatsituation="//@threatsituation.0"
+      risk="//@risk.2"
+      algo="algoB"/>
+  <threatriskalgo
+      threatsituation="//@threatsituation.3"
+      risk="//@risk.0"
+      algo="AlgoC"/>
+  <threatriskalgo
+      threatsituation="//@threatsituation.4"
+      risk="//@risk.0"
+      algo="AlgoD"/>
+  <threatriskalgo
+      threatsituation="//@threatsituation.3"
+      risk="//@risk.1"
+      algo="AlgoE"/>
+  <authenticationmechanism
+      mechanism="fingerprint"
+      risk="//@risk.0 //@risk.1 //@risk.2"/>
+  <authenticationmechanism
+      mechanism="MobileConnect"
+      risk="//@risk.0 //@risk.1"/>
+  <authenticationmechanism
+      mechanism="Password"
+      risk="//@risk.0 //@risk.2"/>
+  <authenticationmechanism
+      mechanism="TokenAuth"
+      risk="//@risk.0 //@risk.1"/>
+  <risk threatriskalgo="//@threatriskalgo.2 //@threatriskalgo.3"
+      fearedEvent="Robot"
+      authenticationmechanism="//@authenticationmechanism.0 //@authenticationmechanism.1 //@authenticationmechanism.2 //@authenticationmechanism.3"/>
+  <risk threatriskalgo="//@threatriskalgo.0 //@threatriskalgo.4"
+      fearedEvent="MemCredTheft"
+      authenticationmechanism="//@authenticationmechanism.0 //@authenticationmechanism.1 //@authenticationmechanism.3"/>
+  <risk threatriskalgo="//@threatriskalgo.1"
+      fearedEvent="DevTheft"
+      authenticationmechanism="//@authenticationmechanism.0 //@authenticationmechanism.2"/>
+</modellingFrameworkContext4Authentication:ModellingFramework>

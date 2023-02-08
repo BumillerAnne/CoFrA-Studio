@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modellingFrameworkContext4Authentication:ModellingFramework
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:modellingFrameworkContext4Authentication="http://www.example.org/modellingFrameworkContext4Authentication"
+    xsi:schemaLocation="http://www.example.org/modellingFrameworkContext4Authentication modellingFrameworkContext4Authentication.ecore">
+  <contextinformation
+      xsi:type="modellingFrameworkContext4Authentication:RequiredContextInformation"
+      context="Calls"/>
+  <contextinformation
+      xsi:type="modellingFrameworkContext4Authentication:RequiredContextInformation"
+      context="Schedule"/>
+  <contextinformation
+      xsi:type="modellingFrameworkContext4Authentication:RequiredContextInformation"
+      context="GPS"/>
+  <contextthreatalgo
+      algo="BeliefAnalyser"/>
+  <threatsituation
+      threatriskalgo="//@threatriskalgo.0"
+      threat="abnormalCalls"/>
+  <threatsituation
+      threatriskalgo="//@threatriskalgo.0"
+      threat="abnormalGPS"/>
+  <threatsituation
+      threatriskalgo="//@threatriskalgo.0"
+      threat="abnormalSchedule"/>
+  <threatriskalgo
+      threatsituation="//@threatsituation.0 //@threatsituation.1 //@threatsituation.2"
+      risk="//@risk.0 //@risk.1 //@risk.2 //@risk.3 //@risk.4 //@risk.5"
+      algo="AuthenticationService"/>
+  <authenticationmechanism
+      mechanism="SSN"
+      risk="//@risk.0"/>
+  <authenticationmechanism
+      mechanism="login_pw"
+      risk="//@risk.1"/>
+  <authenticationmechanism
+      mechanism="birthday"
+      risk="//@risk.2"/>
+  <authenticationmechanism
+      mechanism="driverLicenseNumber"
+      risk="//@risk.3"/>
+  <authenticationmechanism
+      mechanism="zipcode"
+      risk="//@risk.4"/>
+  <authenticationmechanism
+      mechanism="favoriteColor"
+      risk="//@risk.5"/>
+  <risk threatriskalgo="//@threatriskalgo.0"
+      fearedEvent="High_Suspect"
+      authenticationmechanism="//@authenticationmechanism.0">
+    <factor>possession</factor>
+  </risk>
+  <risk threatriskalgo="//@threatriskalgo.0"
+      fearedEvent="High_Abnormal"
+      authenticationmechanism="//@authenticationmechanism.1">
+    <factor>knowledge</factor>
+  </risk>
+  <risk threatriskalgo="//@threatriskalgo.0"
+      fearedEvent="Medium_Suspect"
+      authenticationmechanism="//@authenticationmechanism.2">
+    <factor>personal</factor>
+  </risk>
+  <risk threatriskalgo="//@threatriskalgo.0"
+      fearedEvent="Medium_Abnormal"
+      authenticationmechanism="//@authenticationmechanism.3">
+    <factor>possession</factor>
+  </risk>
+  <risk threatriskalgo="//@threatriskalgo.0"
+      fearedEvent="Low_Suspect"
+      authenticationmechanism="//@authenticationmechanism.4">
+    <factor>human</factor>
+  </risk>
+  <risk threatriskalgo="//@threatriskalgo.0"
+      fearedEvent="Low_Abnormal"
+      authenticationmechanism="//@authenticationmechanism.5">
+    <factor>personal</factor>
+  </risk>
+</modellingFrameworkContext4Authentication:ModellingFramework>
