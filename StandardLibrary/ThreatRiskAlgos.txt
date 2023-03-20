@@ -1,1 +1,204 @@
+[
+  {
+    "name":"deviceIpRisk",
+    "description":"memorial credential theft characterised through changes in device and IP",
+    "url_references":[
+      
+    ],
+    "risks":[
+      {
+        "name":"MemorialCredentialTheft",
+        "description":"",
+        "url_references":[
+         
+        ],
+        "factor_kinds":[
+          {
+            "name":"knowledge"
+          }
+        ]
+      }
+    ],
+    "threat_situations":[
+       {
+        "name":"deviceAnomaly",
+        "description":"",
+        "url_references":[
+          
+        ]
+      },
+      {
+        "name":"ipAnomaly",
+        "description":"",
+        "url_references":[
+          
+        ]
+      }
+    ]
+  },
+  {
+    "name":"locationBrowserRisk",
+    "description":"memorial credential theft characterised through changes in location and browser",
+    "url_references":[
+      
+    ],
+    "risks":[
+      {
+        "name":"MemorialCredentialTheft",
+        "description":"",
+        "url_references":[
+         
+        ],
+        "factor_kinds":[
+          {
+            "name":"knowledge"
+          }
+        ]
+      }
+    ],
+    "threat_situations":[
+       {
+        "name":"locationAnomaly",
+        "description":"",
+        "url_references":[
+          
+        ]
+      },
+      {
+        "name":"browserAnomaly",
+        "description":"",
+        "url_references":[
+          
+        ]
+      }
+    ]
+  },
+  {
+    "name":"locationTimeRisk",
+    "description":"physical theft characterised through changes in location and time",
+    "url_references":[
+      
+    ],
+    "risks":[
+      {
+        "name":"PhysicalTheft",
+        "description":"",
+        "url_references":[
+         
+        ],
+        "factor_kinds":[
+          {
+            "name":""
+          }
+        ]
+      }
+    ],
+    "threat_situations":[
+       {
+        "name":"locationAnomaly",
+        "description":"",
+        "url_references":[
+          
+        ]
+      },
+      {
+        "name":"timeAnomaly",
+        "description":"",
+        "url_references":[
+          
+        ]
+      }
+    ]
+  },
+  {
+    "name":"behaviourRisk",
+    "description":"physical theft characterised through changes in behaviour",
+    "url_references":[
+      
+    ],
+    "risks":[
+      {
+        "name":"PhysicalTheft",
+        "description":"",
+        "url_references":[
+         
+        ],
+        "factor_kinds":[
+          {
+            "name":""
+          }
+        ]
+      }
+    ],
+    "threat_situations":[
+       {
+        "name":"behaviourAnomaly",
+        "description":"",
+        "url_references":[
+          
+        ]
+      }
+    ]
+  },
+  {
+    "name":"botDetectionSusTime",
+    "description":"algorithm to characterise the risk of automated bots through the time speed between successive connections",
+    "url_references":[
+      
+    ],
+    "risks":[
+      {
+        "name":"RobotPatterns",
+        "description":"",
+        "url_references":[
+         
+        ],
+        "factor_kinds":[
+          {
+            "name":""
+          }
+        ]
+      }
+    ],
+    "threat_situations":[
+       {
+        "name":"fastLocationChange",
+        "description":"",
+        "url_references":[
+          
+        ]
+      }
+    ]
+  },
+  {
+    "name":"botDetectionTimeVar",
+    "description":"algorithm to characterise the risk of automated bots through the time variance between connections",
+    "url_references":[
+      
+    ],
+    "risks":[
+      {
+        "name":"RobotPatterns",
+        "description":"",
+        "url_references":[
+         
+        ],
+        "factor_kinds":[
+          {
+            "name":""
+          }
+        ]
+      }
+    ],
+    "threat_situations":[
+       {
+        "name":"suspiciousTimeDiff",
+        "description":"",
+        "url_references":[
+          
+        ]
+      }
+    ]
+  }
+]
 
