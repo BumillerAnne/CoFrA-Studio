@@ -1,1 +1,167 @@
+[
+  {
+    "name":"PhysicalObservation",
+    "description":"An attacker impersonates a user after observing him/her authenticate (e.g., shoulder surfing, filming the keyboard, recording keystroke sounds, or thermal imaging of keypad)",
+    "url_references":[
+      
+    ],
+    "factor_kinds":[
+      {"name":"possesion", "value": 0},
+      {"name":"knowledge", "value": 1},
+      {"name":"being", "value": 0},
+      {"name":"location", "value": 0},
+      {"name":"human", "value": 0},
+      {"name":"personal", "value": 0}]
+    },
+      {
+        "name":"Targeted-Impersonation",
+        "description":"impersonation of a specific user by exploiting knowledge of personal details (birth date, names of relatives etc.), knowledge questions are the canonical scheme that fails on this point" ,
+        "url_references":[
+          
+        ],
+        "factor_kinds":[
+          {"name":"possesion", "value": 0},
+          {"name":"knowledge", "value": 0},
+          {"name":"being", "value": 1},
+          {"name":"location", "value": 0},
+          {"name":"human", "value": 0},
+          {"name":"personal", "value": 1}
+    ]
+  },
+  {
+    "name":"Throttled-Guessing",
+    "description":"attacker whose rate of guessing is constrained by the verifier canncanot successfully guess the secrets of a significant fraction of users" ,
+    "url_references":[
+      
+    ],
+    "factor_kinds":[
+      {"name":"possesion", "value": 0},
+      {"name":"knowledge", "value": 1},
+      {"name":"being", "value": 0},
+      {"name":"location", "value": 0},
+      {"name":"human", "value": 0},
+      {"name":"personal", "value": 0}
+]
+},
+{
+  "name":"Unthrottled-Guessing",
+  "description":"attacker whose rate of guessing is constrained only by available computing resources can successfully guess the secrets of a significant fraction of users" ,
+  "url_references":[
+    
+  ],
+  "factor_kinds":[
+    {"name":"possesion", "value": 0},
+    {"name":"knowledge", "value": 1},
+    {"name":"being", "value": 0},
+    {"name":"location", "value": 0},
+    {"name":"human", "value": 0},
+    {"name":"personal", "value": 0}
+]
+},
+{
+  "name":"Internal-Observation",
+  "description":"attacker can impersonate a user by intercepting the user’s input from inside the user’s device" ,
+  "url_references":[
+    
+  ],
+  "factor_kinds":[
+    {"name":"possesion", "value": 0},
+    {"name":"knowledge", "value": 1},
+    {"name":"being", "value": 0},
+    {"name":"location", "value": 0},
+    {"name":"human", "value": 0},
+    {"name":"personal", "value": 0}
+]
+},
+{
+  "name":"Leaks-from-Other-Verifiers",
+  "description":"something taht a verifier could possibly leak can help an attacker impersonate the user to another verifier (penalizes schemes where insider fraud at one provider, or a successful attack on one back-end, endangers the user’s accounts at other sites)" ,
+  "url_references":[
+    
+  ],
+  "factor_kinds":[
+    {"name":"possesion", "value": 0},
+    {"name":"knowledge", "value": 1},
+    {"name":"being", "value": 0},
+    {"name":"location", "value": 0},
+    {"name":"human", "value": 0},
+    {"name":"personal", "value": 0}
+]
+},
+{
+  "name":"Phishing",
+  "description":"attacker who simulates a valid verifier (including by DNS manipulation) can collect credentials that can later be used to impersonate the user to the actual verifier. This penalizes schemes allowing phishers to get victims to authenticate to lookalike sites and later use the harvested credentials against the genuine sites." ,
+  "url_references":[
+    
+  ],
+  "factor_kinds":[
+    {"name":"possesion", "value": 0},
+    {"name":"knowledge", "value": 1},
+    {"name":"being", "value": 0},
+    {"name":"location", "value": 0},
+    {"name":"human", "value": 0},
+    {"name":"personal", "value": 0}
+]
+},
+{
+  "name":"Theft",
+  "description":"a physical object for authentication can be used for authentication by another person who gains possession of it" ,
+  "url_references":[
+    
+  ],
+  "factor_kinds":[
+    {"name":"possesion", "value": 1},
+    {"name":"knowledge", "value": 0},
+    {"name":"being", "value": 0},
+    {"name":"location", "value": 0},
+    {"name":"human", "value": 0},
+    {"name":"personal", "value": 0}
+]
+},
+{
+  "name":"AutomatedBot",
+  "description":"the login behaviour seems to be a robot pattern" ,
+  "url_references":[
+    
+  ],
+  "factor_kinds":[
+    {"name":"possesion", "value": 0},
+    {"name":"knowledge", "value": 0},
+    {"name":"being", "value": 0},
+    {"name":"location", "value": 0},
+    {"name":"human", "value": 1},
+    {"name":"personal", "value": 0}
+]
+},
+{
+  "name":"vpnAttacker",
+  "description":"knows the country of the victim. Therefore, the attacker spoofs the IP geolocation using a VPN connection and uses popular user agent strings. The IP address does not necessarily have to belong to a VPN service provider" ,
+  "url_references":[
+    
+  ],
+  "factor_kinds":[
+    {"name":"possesion", "value": 0},
+    {"name":"knowledge", "value": 0},
+    {"name":"being", "value": 0},
+    {"name":"location", "value": 1},
+    {"name":"human", "value": 0},
+    {"name":"personal", "value": 0}
+]
+},
+{
+  "name":"naiveAttacker",
+  "description":"signs in from a random IP address from somewhere in the world" ,
+  "url_references":[
+    
+  ],
+  "factor_kinds":[
+    {"name":"possesion", "value": 0},
+    {"name":"knowledge", "value": 0},
+    {"name":"being", "value": 0},
+    {"name":"location", "value": 0},
+    {"name":"human", "value": 0},
+    {"name":"personal", "value": 0}
+]
+}
+]
 
