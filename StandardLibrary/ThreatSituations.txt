@@ -1,1 +1,81 @@
+[
+  {
+    "name":"locationAnomaly",
+    "description":"anomalous location in geographic data (derivation from the user's habits)",
+    "url_references":[
+      {
+        "name":"Freeman et al.",
+        "value":"10.14722/ndss.2016.23240"
+      }
+    ]
+  },
+  {
+    "name":"ipAnomaly",
+    "description":"anomalous ip address (the ip address has never been observed in the user's history)",
+    "url_references":[
+      {
+        "name":"Freeman et al.",
+        "value":"10.14722/ndss.2016.23240"
+      }
+    ]
+  },
+  {
+    "name":"fastLocationChange",
+    "description":"suspicious speed between two connections",
+    "url_references":[
+   
+    ]
+  },
+  {
+    "name":"deviceAnomaly",
+    "description":"anomalous device (the device address has never been observed in the user's history)",
+    "url_references":[
+   
+    ]
+  },
+  {
+    "name":"behaviourAnomaly",
+    "description":"anomalous behaviour (the user's behaviour differs from usual behaviour)",
+    "url_references":[
+   
+    ]
+  },
+  {
+    "name":"activityAnomaly",
+    "description":"the users' interactions with the systems differ from his/her usual activities",
+    "url_references":[
+   
+    ]
+  },
+  {
+    "name":"timeAnomaly",
+    "description":"the users' login attemps occurs at an unusual time (e.g., during the nicght)",
+    "url_references":[
+   
+    ]
+  },
+  {
+    "name":"browserAnomaly",
+    "description":"the observed browser has never been observed in the users' history before",
+    "url_references":[
+   
+    ]
+  },
+  {
+    "name":"highResourceSensitivity",
+    "description":"the resource (information) that the user wants to access is very sensitive and needs high protection",
+    "url_references":[
+   
+    ]
+  },
+  {
+    "name":"suspiciousTimeDiff",
+    "description":"the variance of the time difference between the connections is euqal to zero",
+    "url_references":[
+   
+    ]
+  }
+
+
+]
 
