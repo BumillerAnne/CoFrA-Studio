@@ -1,1 +1,615 @@
+[
+  {
+    "name":"detectLocAnomaly",
+    "description":"Anomaly detection algorithm taking as input the history of  the user's location and determining whether the observed location is unusual",
+    "history":"True",
+    "url_references":[
+      {
+        "name":"Freeman et al.",
+        "value":"10.14722/ndss.2016.23240"
+      }
+    ,
+    {
+      "name":"Bakar et al. ",
+      "value":"10.1109/SAI.2014.6918248"
+    },
+    {
+      "name":"Al-Muhatadi et al.",
+      "value":"10.1109/PERCOM.2003.1192774"
+    }
+    ],
+    "context_information":[
+      {
+        "name":"location",
+        "history":"True",
+        "frequency":"0",
+        "privacy":"0",
+        "quality":"0",
+        "description":"",
+        "url_references":{},
+        "environment_kinds":[
+          {
+            "name":"",
+            "value":"0"
+          },
+          {
+            "name":"",
+            "value":"0"
+          }
+        ]
+      }
+    ],
+    "threat_situations":[
+       {
+        "name":"locationAnomaly",
+        "description":"",
+        "url_references":[
+          {
+            "name":"",
+            "value":""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name":"detectIpAnomaly",
+    "description":"Anomaly detection algorithm which determines whether the IP address is unknown from the user's history",
+    "history":"True",
+    "url_references":[
+      {
+        "name":"Freeman et al.",
+        "value":"10.14722/ndss.2016.23240"
+      }
+    ],
+    "context_information":[
+      {
+        "name":"IP",
+        "history":"True",
+        "frequency":"0",
+        "privacy":"0",
+        "quality":"0",
+        "description":"",
+        "url_references":{},
+        "environment_kinds":[
+          {
+            "name":"",
+            "value":"0"
+          },
+          {
+            "name":"",
+            "value":"0"
+          }
+        ]
+      }
+    ],
+    "threat_situations":[
+       {
+        "name":"ipAnomaly",
+        "description":"",
+        "url_references":[
+          {
+            "name":"",
+            "value":""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name":"detectDeviceAnomaly",
+    "description":"Anomaly detection algorithm taking as input the history of  the user's devices in use and determining whether the observed device has been observed before",
+    "history":"True",
+    "url_references":[
+      {
+        "name":"Freeman et al.",
+        "value":"10.14722/ndss.2016.23240"
+      }
+    ],
+    "context_information":[
+      {
+        "name":"deviceFingerprinting",
+        "history":"True",
+        "frequency":"0",
+        "privacy":"0",
+        "quality":"0",
+        "description":"",
+        "url_references":{},
+        "environment_kinds":[
+          {
+            "name":"",
+            "value":"0"
+          },
+          {
+            "name":"",
+            "value":"0"
+          }
+        ]
+      }
+    ],
+    "threat_situations":[
+       {
+        "name":"deviceAnomaly",
+        "description":"",
+        "url_references":[
+          {
+            "name":"",
+            "value":""
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name":"userSpeedDetection",
+    "description":"gepgraphic distance and time between two successive connections (e.g.,  successive connections from two countries in a short time is suspicious)",
+    "history":"True",
+    "url_references":[
+      
+    ],
+    "context_information":[
+      {
+        "name":"location",
+    "history":"True",
+    "frequency":"5.0",
+    "privacy":"0.2",
+    "quality":"2.4",
+    "description":"a particular place or position",
+    "url_references":[
+      {
+        "name":"Lima et al.",
+        "value":"https://ieeexplore.ieee.org/document/6104543"
+      },
+      {
+        "name":"Gunjal et al.",
+        "value":"https://ieeexplore.ieee.org/document/9298010"
+      },
+      {
+        "name":"Witte et al.",
+        "value":"https://ieeexplore.ieee.org/document/6680180"
+      },
+      {
+        "name":"Neverova et al.",
+        "value":"https://ieeexplore.ieee.org/document/7458136"
+      },
+      {
+        "name":"Arias-Cabarcos et al.",
+        "value":"https://www.usenix.org/conference/soups2017/workshop-program/way2017/arias-cabarcos"
+      },
+
+      {
+        "name":"Mozzaquatro et al.",
+        "value":"https://ieeexplore.ieee.org/document/8279988"
+      },
+
+      {
+        "name":"En-Nasary et al.",
+        "value":"https://link.springer.com/chapter/10.1007/978-3-642-22365-5_8"
+      },
+      {
+        "name":"Al-Muhatadi et al.",
+        "value":"10.1109/PERCOM.2003.1192774"
+      },
+      {
+        "name":"Bakar et al. ",
+        "value":"10.1109/SAI.2014.6918248"
+      },
+      {
+        "name":"Badram et al. ",
+        "value":"10.1007/978-3-540-39653-6_8"
+      },
+      {
+        "name":"Lenzini et al. ",
+        "value":"10.1016/j.entcs.2007.12.020"
+      },
+      {
+        "name":"Goel et al. ",
+        "value":"http://dx.doi.org/10.1007/978-3-642-12607-9_3"
+      },
+      {
+        "name":"Venkataram et al. ",
+        "value":"10.1109/NOMSW.2007.41"
+      },
+      {
+        "name":"Hayashi et al. ",
+        "value":"https://doi.org/10.1145/2501604.2501607"
+      },
+      {
+        "name":"Gupta et al. ",
+        "value":"10.1109/SocialCom-PASSAT.2012.60"
+      },
+      {
+        "name":"Hintze et al. ",
+        "value":"https://doi.org/10.1145/2800835.2800906"
+      },
+      {
+        "name":"Miettinen et al. ",
+        "value":"https://doi.org/10.1145/2590296.2590337"
+      },
+      {
+        "name":"Seifert et al. ",
+        "value":"https://link.springer.com/chapter/10.1007/978-3-642-12654-3_8"
+      }
+
+
+  
+    ],
+    "environment_kinds":[
+      {
+        "name":"light",
+        "value":"3.4"
+      }
+    ]
+      },
+      {
+        "name":"time",
+        "history":"True",
+        "frequency":"0",
+        "privacy":"0",
+        "quality":"0",
+        "description":"",
+        "url_references":{},
+        "environment_kinds":[
+          {
+            "name":"",
+            "value":"0"
+          },
+          {
+            "name":"",
+            "value":"0"
+          }
+        ]
+      }
+    ],
+    "threat_situations":[
+       {
+        "name":"fastLocationChange",
+        "description":"",
+        "url_references":[
+          {
+            "name":"",
+            "value":""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name":"behaviourAnomalyDetection",
+    "description":"Anomaly detection algorithm taking as input the history of  the user's behaviour in use and determining whether the user's behaviour differs from the previously observed behaviour",
+    "history":"True",
+    "url_references":[
+      
+ 
+    ],
+    "context_information":[
+      {
+        "name":"behaviour",
+        "history":"True",
+        "frequency":"0",
+        "privacy":"0",
+        "quality":"0",
+        "description":"",
+        "url_references":{},
+        "environment_kinds":[
+          {
+            "name":"",
+            "value":"0"
+          },
+          {
+            "name":"",
+            "value":"0"
+          }
+        ]
+      }
+    ],
+    "threat_situations":[
+       {
+        "name":"behaviourAnomaly",
+        "description":"",
+        "url_references":[
+          {
+            "name":"",
+            "value":""
+          }
+        ]
+      }
+    ]
+  },
+
+
+  {
+    "name":"activityDerivation",
+    "description":"Algorithm determining the differences in the users' interations with the system (e.g., Large deviation in purchase volume)",
+    "history":"False",
+    "url_references":[
+      {
+        "name": "Venkataram et al. ",
+        "value": "https://www.researchgate.net/publication/4334341_An_Authentication_Scheme_for_Ubiquitous_Commerce_A_Cognitive_Agents_Based_Approach"
+      }
+ 
+    ],
+    "context_information":[
+      {
+        "name":"activity",
+        "history":"True",
+        "frequency":"0",
+        "privacy":"0",
+        "quality":"0",
+        "description":"",
+        "url_references":{},
+        "environment_kinds":[
+          {
+            "name":"",
+            "value":"0"
+          },
+          {
+            "name":"",
+            "value":"0"
+          }
+        ]
+      }
+    ],
+    "threat_situations":[
+       {
+        "name":"activityAnomaly",
+        "description":"",
+        "url_references":[
+          {
+            "name":"",
+            "value":""
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name":"timeSuspiciousnessDetection",
+    "description":"Algorithm determining the time suspiciousness of the users' login attempt (individual user usually follows the same time pattern when to become active (working/socialize) or to become inactive (sleeping/leisure))",
+    "history":"True",
+    "url_references":[
+    {
+      "name": "Bakar et al. ",
+      "value": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6918248&casa_token=40LkgPS70SAAAAAA:juyZamb52oKrkEi5BhUFG3z04V8Ms9qM0KZ_gq0bJ_LdKOr05ASPz31HW_m0SJzcKHmyxTTNX9aH"
+    },
+    {
+      "name": "Venkataram et al. ",
+      "value": "https://www.researchgate.net/publication/4334341_An_Authentication_Scheme_for_Ubiquitous_Commerce_A_Cognitive_Agents_Based_Approach"
+    }
+ 
+    ],
+    "context_information":[
+      {
+        "name":"time",
+        "history":"True",
+        "frequency":"0",
+        "privacy":"0",
+        "quality":"0",
+        "description":"",
+        "url_references":{},
+        "environment_kinds":[
+          {
+            "name":"",
+            "value":"0"
+          },
+          {
+            "name":"",
+            "value":"0"
+          }
+        ]
+      }
+    ],
+    "threat_situations":[
+       {
+        "name":"timeAnomaly",
+        "description":"",
+        "url_references":[
+          {
+            "name":"",
+            "value":""
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name":"browserDerivation",
+    "description":"Algorithm determining whether a new browser is used by the user",
+    "history":"True",
+    "url_references":[
+      {
+        "name":"Bakar et al. ",
+        "value":"10.1109/SAI.2014.6918248"
+      }
+ 
+    ],
+    "context_information":[
+      {
+        "name":"browser",
+        "history":"True",
+        "frequency":"0",
+        "privacy":"0",
+        "quality":"0",
+        "description":"",
+        "url_references":{},
+        "environment_kinds":[
+          {
+            "name":"",
+            "value":"0"
+          },
+          {
+            "name":"",
+            "value":"0"
+          }
+        ]
+      }
+    ],
+    "threat_situations":[
+       {
+        "name":"browserAnomaly",
+        "description":"",
+        "url_references":[
+          {
+            "name":"",
+            "value":""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name":"resourceSensivityDetection",
+    "description":"Algorithm determining the level of sensitivity of the ressource that the user wants to access",
+    "history":"True",
+    "url_references":[
+      {
+        "name":"Lima et al.",
+        "value":"10.1109/EUC.2011.2"
+      },
+      {
+        "name":"Seifert et al.",
+        "value":"https://link.springer.com/chapter/10.1007/978-3-642-12654-3_8"
+      },
+      {
+        "name":"Riva et al.",
+        "value":"https://www.usenix.org/conference/usenixsecurity12/technical-sessions/presentation/riva"
+      },
+      {
+        "name":"Bakar et al. ",
+        "value":"10.1109/SAI.2014.6918248"
+      },
+      {
+        "name":"Arimura et al. ",
+        "value":"http://toc.proceedings.com/23550webtoc.pdf"
+      },
+      {
+        "name":"Ramakrishnan et al. ",
+        "value":"10.1145/2837126.2837157"
+      },
+      {
+        "name":"Fathi et al. ",
+        "value":"https://doi.org/10.1109/CLOUD.2015.75"
+      }
+ 
+    ],
+    "context_information":[
+      {
+        "name":"resourceSensivity",
+        "history":"True",
+        "frequency":"0",
+        "privacy":"0",
+        "quality":"0",
+        "description":"",
+        "url_references":{},
+        "environment_kinds":[
+          {
+            "name":"",
+            "value":"0"
+          },
+          {
+            "name":"",
+            "value":"0"
+          }
+        ]
+      }
+    ],
+    "threat_situations":[
+       {
+        "name":"highResourceSensitivity",
+        "description":"",
+        "url_references":[
+          {
+            "name":"",
+            "value":""
+          }
+        ]
+      }
+    ]
+  },
+{
+  "name":"TimePattrenDetection",
+  "description":"Algorithm determining the time patterns of connections (e.g., equal time differences between the connections), suspicious if the variance of time is equal or close to zero",
+  "history":"True",
+  "url_references":[
+
+  ],
+  "context_information":[
+    {
+      "name":"time",
+      "history":"True",
+      "frequency":"0",
+      "privacy":"0",
+      "quality":"0",
+      "description":"",
+      "url_references":{},
+      "environment_kinds":[
+        {
+          "name":"",
+          "value":"0"
+        },
+        {
+          "name":"",
+          "value":"0"
+        }
+      ]
+    }
+  ],
+  "threat_situations":[
+     {
+      "name":"suspiciousTimeDiff",
+      "description":"",
+      "url_references":[
+        {
+          "name":"",
+          "value":""
+        }
+      ]
+    }
+  ]
+},
+{
+  "name":"TimePattrenDetection",
+  "description":"Algorithm determining the time patterns of connections (e.g., equal time differences between the connections)",
+  "history":"True",
+  "url_references":[
+
+  ],
+  "context_information":[
+    {
+      "name":"time",
+      "history":"True",
+      "frequency":"0",
+      "privacy":"0",
+      "quality":"0",
+      "description":"",
+      "url_references":{},
+      "environment_kinds":[
+        {
+          "name":"",
+          "value":"0"
+        },
+        {
+          "name":"",
+          "value":"0"
+        }
+      ]
+    }
+  ],
+  "threat_situations":[
+     {
+      "name":"suspiciousTimeDiff",
+      "description":"",
+      "url_references":[
+        {
+          "name":"",
+          "value":""
+        }
+      ]
+    }
+  ]
+}
+]
 
