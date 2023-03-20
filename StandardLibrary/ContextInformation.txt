@@ -1,1 +1,576 @@
+[
+  {
+    "name":"location",
+    "history":"True",
+    "frequency":"5.0",
+    "privacy":"0.2",
+    "quality":"2.4",
+    "description":"a particular place or position",
+    "url_references":[
+      {
+        "name":"Lima et al.",
+        "value":"https://ieeexplore.ieee.org/document/6104543"
+      },
+      {
+        "name":"Gunjal et al.",
+        "value":"https://ieeexplore.ieee.org/document/9298010"
+      },
+      {
+        "name":"Witte et al.",
+        "value":"https://ieeexplore.ieee.org/document/6680180"
+      },
+      {
+        "name":"Neverova et al.",
+        "value":"https://ieeexplore.ieee.org/document/7458136"
+      },
+      {
+        "name":"Arias-Cabarcos et al.",
+        "value":"https://www.usenix.org/conference/soups2017/workshop-program/way2017/arias-cabarcos"
+      },
+
+      {
+        "name":"Mozzaquatro et al.",
+        "value":"https://ieeexplore.ieee.org/document/8279988"
+      },
+
+      {
+        "name":"En-Nasary et al.",
+        "value":"https://link.springer.com/chapter/10.1007/978-3-642-22365-5_8"
+      },
+      {
+        "name":"Al-Muhatadi et al.",
+        "value":"10.1109/PERCOM.2003.1192774"
+      },
+      {
+        "name":"Bakar et al. ",
+        "value":"10.1109/SAI.2014.6918248"
+      },
+      {
+        "name":"Badram et al. ",
+        "value":"10.1007/978-3-540-39653-6_8"
+      },
+      {
+        "name":"Lenzini et al. ",
+        "value":"10.1016/j.entcs.2007.12.020"
+      },
+      {
+        "name":"Goel et al. ",
+        "value":"http://dx.doi.org/10.1007/978-3-642-12607-9_3"
+      },
+      {
+        "name":"Venkataram et al. ",
+        "value":"10.1109/NOMSW.2007.41"
+      },
+      {
+        "name":"Hayashi et al. ",
+        "value":"https://doi.org/10.1145/2501604.2501607"
+      },
+      {
+        "name":"Gupta et al. ",
+        "value":"10.1109/SocialCom-PASSAT.2012.60"
+      },
+      {
+        "name":"Hintze et al. ",
+        "value":"https://doi.org/10.1145/2800835.2800906"
+      },
+      {
+        "name":"Miettinen et al. ",
+        "value":"https://doi.org/10.1145/2590296.2590337"
+      },
+      {
+        "name":"Seifert et al. ",
+        "value":"https://link.springer.com/chapter/10.1007/978-3-642-12654-3_8"
+      }
+
+
+  
+    ],
+    "environment_kinds":[
+      {
+        "name":"light",
+        "value":"3.4"
+      }
+    ]
+  },
+  {
+    "name":"IP",
+    "history":"True",
+    "frequency":"5.1",
+    "privacy":"0.3",
+    "quality":"2.5",
+    "description":"numerical label such as 192.0.2.1 that is connected to a computer network that uses the Internet Protocol for communication",
+    "url_references":[
+      {
+        "name":"Solano et al.",
+        "value":"https://link.springer.com/article/10.1007/s10207-020-00510-x"
+      },
+      {
+        "name":"Liu et al.",
+        "value":"https://arxiv.org/abs/2104.08510"
+      },
+      {
+        "name":"Mozzaquatro et al.",
+        "value":"https://ieeexplore.ieee.org/document/8279988"
+      }
+    ],
+    "environment_kinds":[]
+  },
+
+  {
+    "name":"device",
+    "history":"True",
+    "frequency":"5.2",
+    "privacy":"0.4",
+    "quality":"2.6",
+    "description":"device in use",
+    "url_references":[
+      {
+        "name":"Al-Muhatadi et al.",
+        "value":"https://www.sciencedirect.com/science/article/abs/pii/S2210670720308271?via%3Dihub"
+      },
+      {
+        "name":"Solano et al.",
+        "value":"https://link.springer.com/article/10.1007/s10207-020-00510-x"
+      },
+      {
+        "name":"Witte et al.",
+        "value":"https://ieeexplore.ieee.org/document/6680180"
+      },
+      {
+        "name":"En-Nasary et al.",
+        "value":"https://link.springer.com/chapter/10.1007/978-3-642-22365-5_8"
+      },
+      {
+        "name":"Bakar et al. ",
+        "value":"10.1109/SAI.2014.6918248"
+      },
+      {
+        "name":"Dasgupta et al.",
+        "value":"https://doi.org/10.1016/j.cose.2016.09.004"
+      },
+      {
+        "name":"Venkataram et al. ",
+        "value":"10.1109/NOMSW.2007.41"
+      }
+    ],
+    "environment_kinds":[
+      
+    ]
+  },
+  {
+    "name":"IP",
+    "history":"True",
+    "frequency":"5.1",
+    "privacy":"0.3",
+    "quality":"2.5",
+    "description":"numerical label such as 192.0.2.1 that is connected to a computer network that uses the Internet Protocol for communication",
+    "url_references":[
+      {
+        "name":"Solano et al.",
+        "value":"https://link.springer.com/article/10.1007/s10207-020-00510-x"
+      },
+      {
+        "name":"Liu et al.",
+        "value":"https://arxiv.org/abs/2104.08510"
+      },
+      {
+        "name":"Mozzaquatro et al.",
+        "value":"https://ieeexplore.ieee.org/document/8279988"
+      },
+      {
+        "name":"Freeman et al.",
+        "value":"10.14722/ndss.2016.23240"
+      }
+    ],
+    "environment_kinds":[]
+  },
+
+  {
+    "name":"nearbyDevices",
+    "history":"False",
+    "frequency":"0",
+    "privacy":"2.0",
+    "quality":"2.6",
+    "description":"devices/people in proximity of the user ",
+    "url_references":[
+      {
+        "name":"Miraoui et al.",
+        "value":"https://ieeexplore.ieee.org/document/8716453"
+      },
+      {
+        "name":"Miettinen et al. ",
+        "value":"https://doi.org/10.1145/2590296"
+      },
+      {
+        "name":"Riva et al. ",
+        "value":"https://www.usenix.org/conference/usenixsecurity12/technical-sessions/presentation/riva"
+      }
+    ],
+    "environment_kinds":[
+     { "name":"surrounded", 
+    "value": 5.2}
+      
+    ]
+  },
+  {
+    "name":"light",
+    "history":"False",
+    "frequency":"0",
+    "privacy":"2.0",
+    "quality":"2.6",
+    "description":"measurment of luminosity ",
+    "url_references":[
+      {
+        "name":"Miraoui et al.",
+        "value":"https://ieeexplore.ieee.org/document/8716453"
+      },
+      {
+        "name":"Witte et al.",
+        "value":"https://ieeexplore.ieee.org/document/6680180"
+      },
+      {
+        "name":"Wojtowicz et al.",
+        "value":"10.1007/s00779-017-1035-z"
+      }
+    ],
+    "environment_kinds":[
+     { "name":"darkness", 
+    "value": 5.4}
+      
+    ]
+  },
+  {
+    "name":"noise",
+    "history":"False",
+    "frequency":"0",
+    "privacy":"2.0",
+    "quality":"2.6",
+    "description":"a sound, especially one that is loud or unpleasant or that causes disturbance",
+    "url_references":[
+      {
+        "name":"Miraoui et al.",
+        "value":"https://ieeexplore.ieee.org/document/8716453"
+      },
+      {
+        "name":"Witte et al.",
+        "value":"https://ieeexplore.ieee.org/document/6680180"
+      }
+    ],
+    "environment_kinds":[
+     { "name":"noise", 
+    "value": 5.4}
+      
+    ]
+  },
+  {
+    "name":"activity",
+    "history":"False",
+    "frequency":"0",
+    "privacy":"2.0",
+    "quality":"2.6",
+    "description":"actions of an entity (interactions with systems of device)",
+    "url_references":[
+      {
+        "name":"Miraoui et al.",
+        "value":"https://ieeexplore.ieee.org/document/8716453"
+      },
+      {
+        "name":"Lima et al.",
+        "value":"https://ieeexplore.ieee.org/document/6104543"
+      },
+      {
+        "name":"Bakar et al. ",
+        "value":"10.1109/SAI.2014.6918248"
+      },
+      {
+        "name":"Venkataram et al. ",
+        "value":"10.1109/NOMSW.2007.41"
+      },
+      {
+        "name":"Al-Muhatadi et al.",
+        "value":"10.1109/PERCOM.2003.1192774"
+      },
+      {
+        "name":"Dasgupta et al.",
+        "value":"https://doi.org/10.1016/j.cose.2016.09.004"
+      }
+    ],
+    "environment_kinds":[
+     { "name":"noise", 
+    "value": 5.4}
+      
+    ]
+  },
+  {
+    "name":"personalUserInformation",
+    "history":"False",
+    "frequency":"0",
+    "privacy":"2.0",
+    "quality":"2.6",
+    "description":" any information related to an identifiable person",
+    "url_references":[
+      {
+        "name":"Gunjal et al.",
+        "value":"http://www.iaeng.org/publication/WCECS2014/WCECS2014_pp185-189.pdf"
+      },
+      {
+        "name":"Milton et al.",
+        "value":"https://ieeexplore.ieee.org/document/7745492"
+      }
+    ],
+    "environment_kinds":[
+     
+      
+    ]
+  } ,
+  {
+    "name":"time",
+    "history":"True",
+    "frequency":"0",
+    "privacy":"2.0",
+    "quality":"2.6",
+    "description":" a point of time as measured in hours and minutes past midnight or noon",
+    "url_references":[
+      {
+        "name":"Al-Muhatadi et al.",
+        "value":"https://www.sciencedirect.com/science/article/abs/pii/S2210670720308271?via%3Dihub"
+      },
+      {
+        "name":"Bakar et al. ",
+        "value":"10.1109/SAI.2014.6918248"
+      },
+      {
+        "name":"Venkataram et al. ",
+        "value":"10.1109/NOMSW.2007.41"
+      },
+      {
+        "name":"En-Nasary et al.",
+        "value":"https://link.springer.com/chapter/10.1007/978-3-642-22365-5_8"
+      }
+    ],
+    "environment_kinds":[
+    
+    ]
+  } ,
+  {
+    "name":"behaviour",
+    "history":"True",
+    "frequency":"0",
+    "privacy":"2.0",
+    "quality":"2.6",
+    "description":"behaviour of an entity (e.g., mouse usage, keyboard use)",
+    "url_references":[
+      {
+        "name":"Gunjal et al.",
+        "value":"https://ieeexplore.ieee.org/document/9298010"
+      },
+      {
+        "name":"Solano et al.",
+        "value":"https://link.springer.com/article/10.1007/s10207-020-00510-x"
+      },
+      {
+        "name":"Witte et al.",
+        "value":"https://ieeexplore.ieee.org/document/6680180"
+      },
+      {
+        "name":"Milton et al.",
+        "value":"https://ieeexplore.ieee.org/document/7745492"
+      },
+      {
+        "name":"Neverova et al.",
+        "value":"https://ieeexplore.ieee.org/document/7458136"
+      },
+      {
+        "name":"Roth et al.",
+        "value":"https://ieeexplore.ieee.org/document/6879297"
+      },
+      {
+        "name":"Mozzaquatro et al.",
+        "value":"https://ieeexplore.ieee.org/document/8279988"
+      },
+      {
+        "name":"Ma et al.",
+        "value":"https://harvest.usask.ca/handle/10388/8401"
+      }
+    ],
+    "environment_kinds":[
+    
+    ]
+  } ,
+  {
+    "name":"prefernces",
+    "history":"False",
+    "frequency":"0",
+    "privacy":"2.0",
+    "quality":"2.6",
+    "description":"personal  preferences or those related to user disabilities  (e.g., availability of authnetication mechanisms)",
+    "url_references":[
+      {
+        "name":"En-Nasary et al.",
+        "value":"https://link.springer.com/chapter/10.1007/978-3-642-22365-5_8"
+      }
+    ],
+    "environment_kinds":[
+    
+    ]
+  }  ,
+  {
+    "name":"prefernces",
+    "history":"False",
+    "frequency":"0",
+    "privacy":"2.0",
+    "quality":"2.6",
+    "description":"personal  preferences or those related to user disabilities  (e.g., availability of authnetication mechanisms)",
+    "url_references":[
+      {
+        "name":"En-Nasary et al.",
+        "value":"https://link.springer.com/chapter/10.1007/978-3-642-22365-5_8"
+      }
+    ],
+    "environment_kinds":[
+    
+    ]
+  } ,
+  {
+    "name":"browser",
+    "history":"False",
+    "frequency":"0",
+    "privacy":"2.0",
+    "quality":"2.6",
+    "description":"information about the web browser an entity is using",
+    "url_references":[
+      {
+        "name":"Solano et al.",
+        "value":"https://link.springer.com/article/10.1007/s10207-020-00510-x"
+      }
+    ],
+    "environment_kinds":[
+    
+    ]
+  } ,
+  {
+    "name":"battery",
+    "history":"False",
+    "frequency":"0",
+    "privacy":"2.0",
+    "quality":"2.6",
+    "description":"battery status of the device in use",
+    "url_references":[
+      {
+        "name":"Witte et al.",
+        "value":"10.1109/EST.2013.38"
+      }
+    ],
+    "environment_kinds":[
+    
+    ]
+  } ,
+  {
+    "name":"resourceSensivity",
+    "history":"False",
+    "frequency":"0",
+    "privacy":"0.0",
+    "quality":"2.6",
+    "description":"sensivity of the ressource (information) taht the user wants to access",
+    "url_references":[
+      {
+        "name":"Lima et al.",
+        "value":"10.1109/EUC.2011.2"
+      },
+      {
+        "name":"Seifert et al.",
+        "value":"https://link.springer.com/chapter/10.1007/978-3-642-12654-3_8"
+      },
+      {
+        "name":"Riva et al.",
+        "value":"https://www.usenix.org/conference/usenixsecurity12/technical-sessions/presentation/riva"
+      },
+      {
+        "name":"Bakar et al. ",
+        "value":"10.1109/SAI.2014.6918248"
+      },
+      {
+        "name":"Arimura et al. ",
+        "value":"http://toc.proceedings.com/23550webtoc.pdf"
+      },
+      {
+        "name":"Ramakrishnan et al. ",
+        "value":"10.1145/2837126.2837157"
+      },
+      {
+        "name":"Fathi et al. ",
+        "value":"https://doi.org/10.1109/CLOUD.2015.75"
+      }
+    ],
+    "environment_kinds":[
+    
+    ]
+  } ,
+  {
+    "name":"technicalResources",
+    "history":"False",
+    "frequency":"0",
+    "privacy":"0.0",
+    "quality":"2.6",
+    "description":"technical information (e.g., OS)",
+    "url_references":[
+      {
+        "name":"Al-Muhatadi et al.",
+        "value":"10.1109/PERCOM.2003.1192774" 
+      },
+      {
+        "name":"Badram et al. ",
+        "value":"10.1007/978-3-540-39653-6_8"
+      },
+      {
+        "name":"Lenzini et al. ",
+        "value":"10.1016/j.entcs.2007.12.020"
+      },
+      {
+        "name":"Kayacik et al. ",
+        "value":"https://doi.org/10.48550/arXiv.1410.7743"
+      },
+      {
+        "name":"Lima et al. ",
+        "value":"10.1109/EUC.2011.2"
+      },
+      {
+        "name":"Xiong et al. ",
+        "value":"https://doi.org/10.1145/2675682.2676400"
+      },
+      {
+        "name":"Freeman et al.",
+        "value":"10.14722/ndss.2016.23240"
+      },
+      {
+        "name":"Liu et al.",
+        "value":"http://dl.acm.org/citation.cfm?id=3177177.3177187"
+      },
+      {
+        "name":"Witte et al.",
+        "value":"10.1109/EST.2013.38"
+      },
+      {
+        "name":"Stajano et al.",
+        "value":"https://link.springer.com/content/pdf/10.1007/978-3-642-25867-1_6.pdf"
+      },
+
+      {
+        "name":"Wojtowicz et al.",
+        "value":"10.1007/s00779-017-1035-z"
+      },
+      {
+        "name":"Fathi et al.",
+        "value":"https://doi.org/10.1109/CLOUD.2015.75"
+      },
+      {
+        "name":"Hintze et al.",
+        "value":"https://doi.org/10.1145/2800835.2800906"
+      }
+    ],
+    "environment_kinds":[
+    
+    ]
+  } 
+]
 
