@@ -1,1 +1,1047 @@
+[
+  {
+    "name":"gait",
+    "privacy":0.5,
+    "quality":0.2,
+    "description":"refers to locomotion achieved through the movement of limbs and due to the different properties of an individual's muscular-skeletal structure ",
+    "url_references":[
+      {
+        "name":"Crawford et al.",
+        "value":"https://www.usenix.org/system/files/conference/soups2017/soups2017-crawford.pdf"
+      },
+      {
+        "name":"Dasgupta et al.",
+        "value":"https://www.sciencedirect.com/science/article/pii/S016740481630102X?casa_token=AtFUvDNkllEAAAAA:8J1lF3wvnPju4XZnBlPlGDcLpFbwKzzdKnEFTv8NZgRbnhOxUtotMuecgol-3qURFOih4eTXXw"
+      },
+      {
+        "name":"Hintze et al.",
+        "value":"https://dl.acm.org/doi/pdf/10.1145/2800835.2800906"
+      },
+      {
+        "name":"Primo et al.",
+        "value":"https://www.cv-foundation.org/openaccess/content_cvpr_workshops_2014/W01/papers/Primo_Context-Aware_Active_Authentication_2014_CVPR_paper.pdf"
+      }
+    ],
+    "deployabilities":[
+      {"name": "accessible", "value":0 }, 
+      {"name": "negligibleCostsPerUser", "value":0 }, 
+      {"name": "serverCompatible", "value":0 }, 
+      {"name": "browserCompatible", "value":0 }, 
+      {"name": "mature", "value":0 },
+      {"name": "nonProprietary", "value":1 }
+    ],
+    "usabilities":[ 
+    {"name": "memorywiseEffortless", "value":1 }, 
+    {"name": "nothingToCarry", "value":1 }, 
+    {"name": "scalableForUsers", "value":0 }, 
+    {"name": "easyToLearn", "value":0 }, 
+    {"name": "physicallyEffortless", "value":0 },
+    {"name": "efficientToUse", "value":0 },
+    {"name": "infrequentErrors", "value":0 },
+    {"name": "easyRecoveryFromLoss", "value":0 }
+     
+    ],
+    "efficiencies_to_use":[
+      {"name": "darkness", "value":0 },
+      {"name": "noise", "value":0 },
+      {"name": "activity", "value":0 },
+      {"name": "surrounded", "value":0 }
+    ],
+    "factor_kinds":[
+      {"name":"possesion", "value": 0},
+      {"name":"knowledge", "value": 0},
+      {"name":"being", "value": 1},
+      {"name":"location", "value": 0},
+      {"name":"human", "value": 0},
+      {"name":"personal", "value": 0}
+    ],
+    "attack_resilience_values":[]
+  },
+  {
+    "name":"signature/text",
+    "privacy":0.0,
+    "quality":0.3,
+    "description":"refers to the way the user is writing",
+    "url_references":[
+      {
+        "name":"Dasgupta et al.",
+        "value":"https://www.sciencedirect.com/science/article/pii/S016740481630102X?casa_token=AtFUvDNkllEAAAAA:8J1lF3wvnPju4XZnBlPlGDcLpFbwKzzdKnEFTv8NZgRbnhOxUtotMuecgol-3qURFOih4eTXXw"
+      },
+      {
+        "name":"Mansour et al.",
+        "value":"https://ieeexplore.ieee.org/iel7/7764433/7777180/07777227.pdf?casa_token=TWawf5MZTGUAAAAA:_FU_bnrl3Wu6A5dVvCWSdMD-iWGOXPF6TrAwefobVaq_4934zOK_fR7dettrMzGkWsTzkNIffaVT"
+      }
+    ],
+    "deployabilities":[
+      {"name": "accessible", "value":0 }, 
+      {"name": "negligibleCostsPerUser", "value":0 }, 
+      {"name": "serverCompatible", "value":0 }, 
+      {"name": "browserCompatible", "value":0 }, 
+      {"name": "mature", "value":0 },
+      {"name": "nonProprietary", "value":0 }
+    ],
+    "usabilities":[
+      {"name": "memorywiseEffortless", "value":0 }, 
+      {"name": "nothingToCarry", "value":0 }, 
+      {"name": "scalableForUsers", "value":0 }, 
+      {"name": "easyToLearn", "value":0 }, 
+      {"name": "physicallyEffortless", "value":0 },
+      {"name": "efficientToUse", "value":0 },
+      {"name": "infrequentErrors", "value":0 },
+      {"name": "easyRecoveryFromLoss", "value":0 }
+    ],
+    "efficiencies_to_use":[
+      {"name": "darkness", "value":0 },
+      {"name": "noise", "value":1 },
+      {"name": "activity", "value":0 },
+      {"name": "surrounded", "value":0 }
+    ],
+    "factor_kinds":[
+      {"name":"possesion", "value": 0},
+      {"name":"knowledge", "value": 0},
+      {"name":"being", "value": 1},
+      {"name":"location", "value": 0},
+      {"name":"human", "value": 0},
+      {"name":"personal", "value": 0}
+    ],
+    "attack_resilience_values":[]
+  },
+  {
+    "name":"mouse",
+    "privacy":0.0,
+    "quality":0.3,
+    "description":"refers to the way the user moving his mouse",
+    "url_references":[
+      {
+        "name":"Dasgupta et al.",
+        "value":"https://www.sciencedirect.com/science/article/pii/S016740481630102X?casa_token=AtFUvDNkllEAAAAA:8J1lF3wvnPju4XZnBlPlGDcLpFbwKzzdKnEFTv8NZgRbnhOxUtotMuecgol-3qURFOih4eTXXw"
+      },
+      {
+        "name":"Witte et al.",
+        "value":"https://ieeexplore.ieee.org/iel7/6679589/6680165/06680180.pdf?casa_token=hjyujodpiXUAAAAA:EUkRR_VQH7ku9lvEfNvR15DxfgLePiF63-H-Diaox80Nh0a534YzHRIYirlGF8gWVkRCYM6k0JHn"
+      }
+    ],
+    "deployabilities":[
+      {"name": "accessible", "value":1 }, 
+      {"name": "negligibleCostsPerUser", "value":1}, 
+      {"name": "serverCompatible", "value":0 }, 
+      {"name": "browserCompatible", "value":0 }, 
+      {"name": "mature", "value":0 },
+      {"name": "nonProprietary", "value":0 }
+    ],
+    "usabilities":[
+      {"name": "memorywiseEffortless", "value":1 }, 
+      {"name": "nothingToCarry", "value":1 }, 
+      {"name": "scalableForUsers", "value":0 }, 
+      {"name": "easyToLearn", "value":1 }, 
+      {"name": "physicallyEffortless", "value":0 },
+      {"name": "efficientToUse", "value":0 },
+      {"name": "infrequentErrors", "value":0 },
+      {"name": "easyRecoveryFromLoss", "value":0 }
+    ],
+    "efficiencies_to_use":[
+      {"name": "darkness", "value":0 },
+      {"name": "noise", "value":1 },
+      {"name": "activity", "value":0 },
+      {"name": "surrounded", "value":1 }
+    ],
+    "factor_kinds":[
+      {"name":"possesion", "value": 0},
+      {"name":"knowledge", "value": 0},
+      {"name":"being", "value": 1},
+      {"name":"location", "value": 0},
+      {"name":"human", "value": 0},
+      {"name":"personal", "value": 0}
+    ],
+    "attack_resilience_values":[]
+  },
+  
+  {
+    "name":"keystrokes",
+    "privacy":0.5,
+    "quality":0.3,
+    "description":"refers to the way the user is typing",
+    "url_references":[
+      {
+        "name":"Dasgupta et al.",
+        "value":"https://www.sciencedirect.com/science/article/pii/S016740481630102X?casa_token=AtFUvDNkllEAAAAA:8J1lF3wvnPju4XZnBlPlGDcLpFbwKzzdKnEFTv8NZgRbnhOxUtotMuecgol-3qURFOih4eTXXw"
+      },
+      {
+        "name":"Witte et al.",
+        "value":"https://ieeexplore.ieee.org/iel7/6679589/6680165/06680180.pdf?casa_token=hjyujodpiXUAAAAA:EUkRR_VQH7ku9lvEfNvR15DxfgLePiF63-H-Diaox80Nh0a534YzHRIYirlGF8gWVkRCYM6k0JHn"
+      }
+    ],
+    "deployabilities":[
+      {"name": "accessible", "value":0 }, 
+      {"name": "negligibleCostsPerUser", "value":0 }, 
+      {"name": "serverCompatible", "value":0 }, 
+      {"name": "browserCompatible", "value":0 }, 
+      {"name": "mature", "value":0 },
+      {"name": "nonProprietary", "value":0 }
+    ],
+    "usabilities":[
+      {"name": "memorywiseEffortless", "value":0 }, 
+      {"name": "nothingToCarry", "value":0 }, 
+      {"name": "scalableForUsers", "value":0 }, 
+      {"name": "easyToLearn", "value":0 }, 
+      {"name": "physicallyEffortless", "value":0 },
+      {"name": "efficientToUse", "value":0 },
+      {"name": "infrequentErrors", "value":0 },
+      {"name": "easyRecoveryFromLoss", "value":0 }
+    ],
+    "efficiencies_to_use":[
+      {"name": "darkness", "value":0 },
+      {"name": "noise", "value":0 },
+      {"name": "activity", "value":0 },
+      {"name": "surrounded", "value":0 }
+    ],
+    "factor_kinds":[
+      {"name":"possesion", "value": 0},
+      {"name":"knowledge", "value": 0},
+      {"name":"being", "value": 0},
+      {"name":"location", "value": 0},
+      {"name":"human", "value": 0},
+      {"name":"personal", "value": 0}
+    ],
+    "attack_resilience_values":[]
+  },
+  {
+    "name":"iris",
+    "privacy":0.0,
+    "quality":0.3,
+    "description":"refers to  the process of using visible and near-infrared light to take a high-contrast photograph of a person's iris",
+    "url_references":[
+      {
+        "name":"Dasgupta et al.",
+        "value":"https://www.sciencedirect.com/science/article/pii/S016740481630102X?casa_token=AtFUvDNkllEAAAAA:8J1lF3wvnPju4XZnBlPlGDcLpFbwKzzdKnEFTv8NZgRbnhOxUtotMuecgol-3qURFOih4eTXXw"
+      },
+      {
+        "name":"Witte et al.",
+        "value":"https://ieeexplore.ieee.org/iel7/6679589/6680165/06680180.pdf?casa_token=hjyujodpiXUAAAAA:EUkRR_VQH7ku9lvEfNvR15DxfgLePiF63-H-Diaox80Nh0a534YzHRIYirlGF8gWVkRCYM6k0JHn"
+      }
+    ],
+    "deployabilities":[
+      {"name": "accessible", "value":0 }, 
+      {"name": "negligibleCostsPerUser", "value":0 }, 
+      {"name": "serverCompatible", "value":0 }, 
+      {"name": "browserCompatible", "value":0 }, 
+      {"name": "mature", "value":0 },
+      {"name": "nonProprietary", "value":0 }
+    ],
+    "usabilities":[
+      {"name": "memorywiseEffortless", "value":0 }, 
+      {"name": "nothingToCarry", "value":0 }, 
+      {"name": "scalableForUsers", "value":0 }, 
+      {"name": "easyToLearn", "value":0 }, 
+      {"name": "physicallyEffortless", "value":0 },
+      {"name": "efficientToUse", "value":0 },
+      {"name": "infrequentErrors", "value":0 },
+      {"name": "easyRecoveryFromLoss", "value":0 }
+    ],
+    "efficiencies_to_use":[
+      {"name": "darkness", "value":0 },
+      {"name": "noise", "value":0 },
+      {"name": "activity", "value":0 },
+      {"name": "surrounded", "value":0 }
+    ],
+    "factor_kinds":[
+      {"name":"possesion", "value": 0},
+      {"name":"knowledge", "value": 0},
+      {"name":"being", "value": 0},
+      {"name":"location", "value": 0},
+      {"name":"human", "value": 0},
+      {"name":"personal", "value": 0}
+    ],
+    "attack_resilience_values":[]
+  },
+  {
+    "name":"face",
+    "privacy":0.0,
+    "quality":0.3,
+    "description":"refers to  the process of identifying or verifying the identity of a person using their face",
+    "url_references":[
+      {
+        "name":"Dasgupta et al.",
+        "value":"https://www.sciencedirect.com/science/article/pii/S016740481630102X?casa_token=AtFUvDNkllEAAAAA:8J1lF3wvnPju4XZnBlPlGDcLpFbwKzzdKnEFTv8NZgRbnhOxUtotMuecgol-3qURFOih4eTXXw"
+      },
+      {
+        "name":"Wójtowicz et al.",
+        "value":"https://link.springer.com/article/10.1007/s00779-016-0905-0"
+      },
+      {
+        "name":"Mansour et al.",
+        "value":"https://ieeexplore.ieee.org/iel7/7764433/7777180/07777227.pdf?casa_token=-R-sdrZOW6MAAAAA:-9J6CBFxdm56vXptL_mdE6fdIcoUJmkdHcy5s3UeWHS4VzStnslweJPP99Yadf7QqaF2iKqsPGTq"
+      },
+      {
+        "name":"Riva et al.",
+        "value":"https://www.usenix.org/system/files/conference/usenixsecurity12/sec12-final154.pdf"
+      },
+      {
+        "name":"Wójtowicz2 et al.",
+        "value":"https://link.springer.com/article/10.1007/s00779-017-1035-z"
+      },
+      {
+        "name":"Hintze et al.",
+        "value":"https://ieeexplore.ieee.org/iel7/7194474/7212169/07214085.pdf?casa_token=BxqDjvV_KWUAAAAA:j2NKnCBx2zSDnpEKDUIruc2WVr-0huB9sFc2TvVXIAqM7mDSg37QFEQUtsDjOJSXDpywMgn3TW2z"
+      },
+      {
+        "name":"Fathi et al.",
+        "value":"https://dl.acm.org/doi/pdf/10.1145/2800835.2800906"
+      }
+    ],
+    "deployabilities":[
+      {"name": "accessible", "value":0 }, 
+      {"name": "negligibleCostsPerUser", "value":0 }, 
+      {"name": "serverCompatible", "value":0 }, 
+      {"name": "browserCompatible", "value":0 }, 
+      {"name": "mature", "value":0 },
+      {"name": "nonProprietary", "value":0 }
+    ],
+    "usabilities":[
+      {"name": "memorywiseEffortless", "value":0 }, 
+      {"name": "nothingToCarry", "value":0 }, 
+      {"name": "scalableForUsers", "value":0 }, 
+      {"name": "easyToLearn", "value":0 }, 
+      {"name": "physicallyEffortless", "value":0 },
+      {"name": "efficientToUse", "value":0 },
+      {"name": "infrequentErrors", "value":0 },
+      {"name": "easyRecoveryFromLoss", "value":0 }
+    ],
+    "efficiencies_to_use":[
+      {"name": "darkness", "value":0 },
+      {"name": "noise", "value":0 },
+      {"name": "activity", "value":0 },
+      {"name": "surrounded", "value":0 }
+    ],
+    "factor_kinds":[
+      {"name":"possesion", "value": 0},
+      {"name":"knowledge", "value": 0},
+      {"name":"being", "value": 0},
+      {"name":"location", "value": 0},
+      {"name":"human", "value": 0},
+      {"name":"personal", "value": 0}
+    ],
+    "attack_resilience_values":[]
+  },
+  {
+    "name":"voice",
+    "privacy":0.0,
+    "quality":0.3,
+    "description":"refers to a person's voice to verify their identity",
+    "url_references":[
+      {
+        "name":"Dasgupta et al.",
+        "value":"https://www.sciencedirect.com/science/article/pii/S016740481630102X?casa_token=AtFUvDNkllEAAAAA:8J1lF3wvnPju4XZnBlPlGDcLpFbwKzzdKnEFTv8NZgRbnhOxUtotMuecgol-3qURFOih4eTXXw"
+      },
+      {
+        "name":"Wójtowicz et al.",
+        "value":"https://link.springer.com/article/10.1007/s00779-016-0905-0"
+      },
+      {
+        "name":"Mansour et al.",
+        "value":"https://ieeexplore.ieee.org/iel7/7764433/7777180/07777227.pdf?casa_token=-R-sdrZOW6MAAAAA:-9J6CBFxdm56vXptL_mdE6fdIcoUJmkdHcy5s3UeWHS4VzStnslweJPP99Yadf7QqaF2iKqsPGTq"
+      },
+      {
+        "name":"Riva et al.",
+        "value":"https://www.usenix.org/system/files/conference/usenixsecurity12/sec12-final154.pdf"
+      },
+      {
+        "name":"Chiasson et al.",
+        "value":"https://ieeexplore.ieee.org/iel5/8858/6134781/06065736.pdf?casa_token=cEVZX1UVDYIAAAAA:J0VOydAPxZbn-lNvq4vEiLlJgP4Z6AAxpXn0AOlwFSrBsNzRLO7sGoonzvjixJ9nh4cZtQJNBz04"
+      }
+
+    ],
+    "deployabilities":[
+      {"name": "accessible", "value":0 }, 
+      {"name": "negligibleCostsPerUser", "value":0 }, 
+      {"name": "serverCompatible", "value":0 }, 
+      {"name": "browserCompatible", "value":0 }, 
+      {"name": "mature", "value":0 },
+      {"name": "nonProprietary", "value":0 }
+    ],
+    "usabilities":[
+      {"name": "memorywiseEffortless", "value":0 }, 
+      {"name": "nothingToCarry", "value":0 }, 
+      {"name": "scalableForUsers", "value":0 }, 
+      {"name": "easyToLearn", "value":0 }, 
+      {"name": "physicallyEffortless", "value":0 },
+      {"name": "efficientToUse", "value":0 },
+      {"name": "infrequentErrors", "value":0 },
+      {"name": "easyRecoveryFromLoss", "value":0 }
+    ],
+    "efficiencies_to_use":[
+      {"name": "darkness", "value":0 },
+      {"name": "noise", "value":0 },
+      {"name": "activity", "value":0 },
+      {"name": "surrounded", "value":0 }
+    ],
+    "factor_kinds":[
+      {"name":"possesion", "value": 0},
+      {"name":"knowledge", "value": 0},
+      {"name":"being", "value": 0},
+      {"name":"location", "value": 0},
+      {"name":"human", "value": 0},
+      {"name":"personal", "value": 0}
+    ],
+    "attack_resilience_values":[]
+  },
+  {
+    "name":"fingerprint",
+    "privacy":0.0,
+    "quality":0.3,
+    "description":"refers to a comparison of a user's fingerprint to a stored fingerprint template in order to validate a user's identity",
+    "url_references":[
+      {
+        "name":"Al-Muhtadi et al.",
+        "value":"https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.13.2802&rep=rep1&type=pdf"
+      },
+      {
+        "name":"Dasgupta et al.",
+        "value":"https://www.sciencedirect.com/science/article/pii/S016740481630102X?casa_token=AtFUvDNkllEAAAAA:8J1lF3wvnPju4XZnBlPlGDcLpFbwKzzdKnEFTv8NZgRbnhOxUtotMuecgol-3qURFOih4eTXXw"
+      },
+      {
+        "name":"Mansour et al.",
+        "value":"https://ieeexplore.ieee.org/iel7/7764433/7777180/07777227.pdf?casa_token=-R-sdrZOW6MAAAAA:-9J6CBFxdm56vXptL_mdE6fdIcoUJmkdHcy5s3UeWHS4VzStnslweJPP99Yadf7QqaF2iKqsPGTq"
+      },
+      {
+        "name":"Wójtowicz et al.",
+        "value":"https://link.springer.com/article/10.1007/s00779-016-0905-0"
+      },
+      {
+        "name":"Wójtowicz2 et al.",
+        "value":"https://link.springer.com/article/10.1007/s00779-017-1035-z"
+      },
+      {
+        "name":"Xiong et al.",
+        "value":"https://dl.acm.org/doi/pdf/10.1145/2675682.2676400"
+      }
+    ],
+    "deployabilities":[
+      {"name": "accessible", "value":0 }, 
+      {"name": "negligibleCostsPerUser", "value":0 }, 
+      {"name": "serverCompatible", "value":0 }, 
+      {"name": "browserCompatible", "value":0 }, 
+      {"name": "mature", "value":0 },
+      {"name": "nonProprietary", "value":0 }
+    ],
+    "usabilities":[
+      {"name": "memorywiseEffortless", "value":0 }, 
+      {"name": "nothingToCarry", "value":0 }, 
+      {"name": "scalableForUsers", "value":0 }, 
+      {"name": "easyToLearn", "value":0 }, 
+      {"name": "physicallyEffortless", "value":0 },
+      {"name": "efficientToUse", "value":0 },
+      {"name": "infrequentErrors", "value":0 },
+      {"name": "easyRecoveryFromLoss", "value":0 }
+    ],
+    "efficiencies_to_use":[
+      {"name": "darkness", "value":0 },
+      {"name": "noise", "value":0 },
+      {"name": "activity", "value":0 },
+      {"name": "surrounded", "value":0 }
+    ],
+    "factor_kinds":[
+      {"name":"possesion", "value": 0},
+      {"name":"knowledge", "value": 0},
+      {"name":"being", "value": 0},
+      {"name":"location", "value": 0},
+      {"name":"human", "value": 0},
+      {"name":"personal", "value": 0}
+    ],
+    "attack_resilience_values":[]
+  },
+  {
+    "name":"hand",
+    "privacy":0.0,
+    "quality":0.3,
+    "description":"refers to a scan of the user's hand and reading various features like the position of veins and bones",
+    "url_references":[
+      {
+        "name":"Dasgupta et al.",
+        "value":"https://www.sciencedirect.com/science/article/pii/S016740481630102X?casa_token=AtFUvDNkllEAAAAA:8J1lF3wvnPju4XZnBlPlGDcLpFbwKzzdKnEFTv8NZgRbnhOxUtotMuecgol-3qURFOih4eTXXw"
+      }
+    ],
+    "deployabilities":[
+      {"name": "accessible", "value":0 }, 
+      {"name": "negligibleCostsPerUser", "value":0 }, 
+      {"name": "serverCompatible", "value":0 }, 
+      {"name": "browserCompatible", "value":0 }, 
+      {"name": "mature", "value":0 },
+      {"name": "nonProprietary", "value":0 }
+    ],
+    "usabilities":[
+      {"name": "memorywiseEffortless", "value":0 }, 
+      {"name": "nothingToCarry", "value":0 }, 
+      {"name": "scalableForUsers", "value":0 }, 
+      {"name": "easyToLearn", "value":0 }, 
+      {"name": "physicallyEffortless", "value":0 },
+      {"name": "efficientToUse", "value":0 },
+      {"name": "infrequentErrors", "value":0 },
+      {"name": "easyRecoveryFromLoss", "value":0 }
+    ],
+    "efficiencies_to_use":[
+      {"name": "darkness", "value":0 },
+      {"name": "noise", "value":0 },
+      {"name": "activity", "value":0 },
+      {"name": "surrounded", "value":0 }
+    ],
+    "factor_kinds":[
+      {"name":"possesion", "value": 0},
+      {"name":"knowledge", "value": 0},
+      {"name":"being", "value": 0},
+      {"name":"location", "value": 0},
+      {"name":"human", "value": 0},
+      {"name":"personal", "value": 0}
+    ],
+    "attack_resilience_values":[]
+  },
+  
+  {
+    "name":"password",
+    "privacy":0.0,
+    "quality":0.3,
+    "description":"involves a user entering their username, accompanied by a secret code or passphrase",
+    "url_references":[
+      {
+        "name":"Al-Muhtadi et al.",
+        "value":"https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.13.2802&rep=rep1&type=pdf"
+      },
+ 
+      {
+        "name":"Xiong et al.",
+        "value":"https://dl.acm.org/doi/pdf/10.1145/2675682.2676400"
+      },
+      {
+        "name":"Bardram et al.",
+        "value":"https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.602.1670&rep=rep1&type=pdf"
+      },
+      {
+        "name":"Goel et al.",
+        "value":"https://link.springer.com/chapter/10.1007/978-3-642-12607-9_3"
+      },
+      {
+        "name":"Lenzini et al.",
+        "value":"https://www.sciencedirect.com/science/article/pii/S1571066108000595/pdf?md5=c4a77c1dcb0742748c092a006a0d81c6&pid=1-s2.0-S1571066108000595-main.pdf&_valck=1"
+      },
+      {
+        "name":"Lima et al.",
+        "value":"https://dl.acm.org/doi/pdf/10.1145/2069131.2069146"
+      },
+      {
+        "name":"Das et al.",
+        "value":"https://dl.acm.org/doi/pdf/10.1145/2501604.2501607"
+      },
+      {
+        "name":"Venkataram et al.",
+        "value":"https://ieeexplore.ieee.org/iel5/4509915/4509916/04509957.pdf?casa_token=OjgAUOW-DcEAAAAA:i0OHyv7oet7wn8MFvxIAGLjCZBy6GP5Eo0v_gttZ95sQOhZm7We4w-MRITQdIp3_ehQE_Oz-iRkx"
+      }
+    ],
+    "deployabilities":[
+      {"name": "accessible", "value":0 }, 
+      {"name": "negligibleCostsPerUser", "value":0 }, 
+      {"name": "serverCompatible", "value":0 }, 
+      {"name": "browserCompatible", "value":0 }, 
+      {"name": "mature", "value":0 },
+      {"name": "nonProprietary", "value":0 }
+    ],
+    "usabilities":[
+      {"name": "memorywiseEffortless", "value":0 }, 
+      {"name": "nothingToCarry", "value":0 }, 
+      {"name": "scalableForUsers", "value":0 }, 
+      {"name": "easyToLearn", "value":0 }, 
+      {"name": "physicallyEffortless", "value":0 },
+      {"name": "efficientToUse", "value":0 },
+      {"name": "infrequentErrors", "value":0 },
+      {"name": "easyRecoveryFromLoss", "value":0 }
+    ],
+    "efficiencies_to_use":[
+      {"name": "darkness", "value":0 },
+      {"name": "noise", "value":0 },
+      {"name": "activity", "value":0 },
+      {"name": "surrounded", "value":0 }
+    ],
+    "factor_kinds":[
+      {"name":"possesion", "value": 0},
+      {"name":"knowledge", "value": 0},
+      {"name":"being", "value": 0},
+      {"name":"location", "value": 0},
+      {"name":"human", "value": 0},
+      {"name":"personal", "value": 0}
+    ],
+    "attack_resilience_values":[]
+  },
+  {
+    "name":"PIN",
+    "privacy":0.0,
+    "quality":0.3,
+    "description":"involves a user entering their username, accompanied by a PIN",
+    "url_references":[
+      {
+        "name":"Hayashi et al.",
+        "value":"https://dl.acm.org/doi/pdf/10.1145/2501604.2501607"
+      },
+      {
+        "name":"Bakar et al.",
+        "value":"https://ieeexplore.ieee.org/iel7/6901367/6918164/06918248.pdf?casa_token=81XH1WO7J2YAAAAA:zZtqDmGkECVqp9T0Goi9_5p6BtAifVfZaZmDNM34_MsUGS4jqf_cLvAi6gsseSplqLBMaBOdfxdu"
+      },
+      {
+        "name":"Riva et al.",
+        "value":"https://www.usenix.org/system/files/conference/usenixsecurity12/sec12-final154.pdf"
+      },
+       {
+        "name":"Seifert et al.",
+        "value":"https://www.medien.informatik.uni-muenchen.de/pubdb/publications/pub/seifert2010pervasive/seifert2010pervasive.pdf"
+      },
+      {
+        "name":"Wójtowicz2 et al.",
+        "value":"https://link.springer.com/article/10.1007/s00779-017-1035-z"
+      }
+    ],
+    "deployabilities":[
+      {"name": "accessible", "value":0 }, 
+      {"name": "negligibleCostsPerUser", "value":0 }, 
+      {"name": "serverCompatible", "value":0 }, 
+      {"name": "browserCompatible", "value":0 }, 
+      {"name": "mature", "value":0 },
+      {"name": "nonProprietary", "value":0 }
+    ],
+    "usabilities":[
+      {"name": "memorywiseEffortless", "value":0 }, 
+      {"name": "nothingToCarry", "value":0 }, 
+      {"name": "scalableForUsers", "value":0 }, 
+      {"name": "easyToLearn", "value":0 }, 
+      {"name": "physicallyEffortless", "value":0 },
+      {"name": "efficientToUse", "value":0 },
+      {"name": "infrequentErrors", "value":0 },
+      {"name": "easyRecoveryFromLoss", "value":0 }
+    ],
+    "efficiencies_to_use":[
+      {"name": "darkness", "value":0 },
+      {"name": "noise", "value":0 },
+      {"name": "activity", "value":0 },
+      {"name": "surrounded", "value":0 }
+    ],
+    "factor_kinds":[
+      {"name":"possesion", "value": 0},
+      {"name":"knowledge", "value": 0},
+      {"name":"being", "value": 0},
+      {"name":"location", "value": 0},
+      {"name":"human", "value": 0},
+      {"name":"personal", "value": 0}
+    ],
+    "attack_resilience_values":[]
+  },
+  {
+    "name":"Pattern",
+    "privacy":0.0,
+    "quality":0.3,
+    "description":"allows user to login by drawing a pattern on screen rather than entering his user id and password",
+    "url_references":[
+      {
+        "name":"Gupta et al.",
+        "value":"https://asokan.org/asokan/research/socialcom2012.pdf"
+      },
+      {
+        "name":"Bakar et al.",
+        "value":"https://ieeexplore.ieee.org/iel7/6901367/6918164/06918248.pdf?casa_token=81XH1WO7J2YAAAAA:zZtqDmGkECVqp9T0Goi9_5p6BtAifVfZaZmDNM34_MsUGS4jqf_cLvAi6gsseSplqLBMaBOdfxdu"
+      }
+    ],
+    "deployabilities":[
+      {"name": "accessible", "value":0 }, 
+      {"name": "negligibleCostsPerUser", "value":0 }, 
+      {"name": "serverCompatible", "value":0 }, 
+      {"name": "browserCompatible", "value":0 }, 
+      {"name": "mature", "value":0 },
+      {"name": "nonProprietary", "value":0 }
+    ],
+    "usabilities":[
+      {"name": "memorywiseEffortless", "value":0 }, 
+      {"name": "nothingToCarry", "value":0 }, 
+      {"name": "scalableForUsers", "value":0 }, 
+      {"name": "easyToLearn", "value":0 }, 
+      {"name": "physicallyEffortless", "value":0 },
+      {"name": "efficientToUse", "value":0 },
+      {"name": "infrequentErrors", "value":0 },
+      {"name": "easyRecoveryFromLoss", "value":0 }
+    ],
+    "efficiencies_to_use":[
+      {"name": "darkness", "value":0 },
+      {"name": "noise", "value":0 },
+      {"name": "activity", "value":0 },
+      {"name": "surrounded", "value":0 }
+    ],
+    "factor_kinds":[
+      {"name":"possesion", "value": 0},
+      {"name":"knowledge", "value": 0},
+      {"name":"being", "value": 0},
+      {"name":"location", "value": 0},
+      {"name":"human", "value": 0},
+      {"name":"personal", "value": 0}
+    ],
+    "attack_resilience_values":[]
+  },
+  {
+    "name":"OTP",
+    "privacy":0.0,
+    "quality":0.3,
+    "description":"a password (send per SMS or e-mail) that is valid for only one login session or transaction",
+    "url_references":[
+      {
+        "name":"Dasgupta et al.",
+        "value":"https://www.sciencedirect.com/science/article/pii/S016740481630102X?casa_token=AtFUvDNkllEAAAAA:8J1lF3wvnPju4XZnBlPlGDcLpFbwKzzdKnEFTv8NZgRbnhOxUtotMuecgol-3qURFOih4eTXXw"
+      },
+      {
+        "name":"Fathi et al.",
+        "value":"https://dl.acm.org/doi/pdf/10.1145/2800835.2800906"
+      },
+      {
+        "name":"Freeman et al.",
+        "value":"http://pralab.diee.unica.it/sites/default/files/freeman16-ndss.pdf"
+      },
+      {
+        "name":"Venkataram et al.",
+        "value":"https://ieeexplore.ieee.org/iel5/4509915/4509916/04509957.pdf?casa_token=OjgAUOW-DcEAAAAA:i0OHyv7oet7wn8MFvxIAGLjCZBy6GP5Eo0v_gttZ95sQOhZm7We4w-MRITQdIp3_ehQE_Oz-iRkx"
+      }
+    ],
+    "deployabilities":[
+      {"name": "accessible", "value":0 }, 
+      {"name": "negligibleCostsPerUser", "value":0 }, 
+      {"name": "serverCompatible", "value":0 }, 
+      {"name": "browserCompatible", "value":0 }, 
+      {"name": "mature", "value":0 },
+      {"name": "nonProprietary", "value":0 }
+    ],
+    "usabilities":[
+      {"name": "memorywiseEffortless", "value":0 }, 
+      {"name": "nothingToCarry", "value":0 }, 
+      {"name": "scalableForUsers", "value":0 }, 
+      {"name": "easyToLearn", "value":0 }, 
+      {"name": "physicallyEffortless", "value":0 },
+      {"name": "efficientToUse", "value":0 },
+      {"name": "infrequentErrors", "value":0 },
+      {"name": "easyRecoveryFromLoss", "value":0 }
+    ],
+    "efficiencies_to_use":[
+      {"name": "darkness", "value":0 },
+      {"name": "noise", "value":0 },
+      {"name": "activity", "value":0 },
+      {"name": "surrounded", "value":0 }
+    ],
+    "factor_kinds":[
+      {"name":"possesion", "value": 0},
+      {"name":"knowledge", "value": 0},
+      {"name":"being", "value": 0},
+      {"name":"location", "value": 0},
+      {"name":"human", "value": 0},
+      {"name":"personal", "value": 0}
+    ],
+    "attack_resilience_values":[]
+  },
+  {
+    "name":"Questions",
+    "privacy":0.0,
+    "quality":0.3,
+    "description":"an administrator can set up a series of predefined question and a needs to answer these questions",
+    "url_references":[
+      {
+        "name":"Dasgupta et al.",
+        "value":"https://www.sciencedirect.com/science/article/pii/S016740481630102X?casa_token=AtFUvDNkllEAAAAA:8J1lF3wvnPju4XZnBlPlGDcLpFbwKzzdKnEFTv8NZgRbnhOxUtotMuecgol-3qURFOih4eTXXw"
+      },
+      {
+        "name":"Fathi et al.",
+        "value":"https://dl.acm.org/doi/pdf/10.1145/2800835.2800906"
+      },
+      {
+        "name":"Freeman et al.",
+        "value":"http://pralab.diee.unica.it/sites/default/files/freeman16-ndss.pdf"
+      },
+      {
+        "name":"Lima et al.",
+        "value":"https://dl.acm.org/doi/pdf/10.1145/2069131.2069146"
+      }
+    ],
+    "deployabilities":[
+      {"name": "accessible", "value":0 }, 
+      {"name": "negligibleCostsPerUser", "value":0 }, 
+      {"name": "serverCompatible", "value":0 }, 
+      {"name": "browserCompatible", "value":0 }, 
+      {"name": "mature", "value":0 },
+      {"name": "nonProprietary", "value":0 }
+    ],
+    "usabilities":[
+      {"name": "memorywiseEffortless", "value":0 }, 
+      {"name": "nothingToCarry", "value":0 }, 
+      {"name": "scalableForUsers", "value":0 }, 
+      {"name": "easyToLearn", "value":0 }, 
+      {"name": "physicallyEffortless", "value":0 },
+      {"name": "efficientToUse", "value":0 },
+      {"name": "infrequentErrors", "value":0 },
+      {"name": "easyRecoveryFromLoss", "value":0 }
+    ],
+    "efficiencies_to_use":[
+      {"name": "darkness", "value":0 },
+      {"name": "noise", "value":0 },
+      {"name": "activity", "value":0 },
+      {"name": "surrounded", "value":0 }
+    ],
+    "factor_kinds":[
+      {"name":"possesion", "value": 0},
+      {"name":"knowledge", "value": 0},
+      {"name":"being", "value": 0},
+      {"name":"location", "value": 0},
+      {"name":"human", "value": 0},
+      {"name":"personal", "value": 0}
+    ],
+    "attack_resilience_values":[]
+  },
+  {
+    "name":"Captcha",
+    "privacy":0.0,
+    "quality":0.3,
+    "description":"determines whether the user is real or a spam robot",
+    "url_references":[
+      {
+        "name":"",
+        "value":""
+      }
+    ],
+    "deployabilities":[
+      {"name": "accessible", "value":0 }, 
+      {"name": "negligibleCostsPerUser", "value":0 }, 
+      {"name": "serverCompatible", "value":0 }, 
+      {"name": "browserCompatible", "value":0 }, 
+      {"name": "mature", "value":0 },
+      {"name": "nonProprietary", "value":0 }
+    ],
+    "usabilities":[
+      {"name": "memorywiseEffortless", "value":0 }, 
+      {"name": "nothingToCarry", "value":0 }, 
+      {"name": "scalableForUsers", "value":0 }, 
+      {"name": "easyToLearn", "value":0 }, 
+      {"name": "physicallyEffortless", "value":0 },
+      {"name": "efficientToUse", "value":0 },
+      {"name": "infrequentErrors", "value":0 },
+      {"name": "easyRecoveryFromLoss", "value":0 }
+    ],
+    "efficiencies_to_use":[
+      {"name": "darkness", "value":0 },
+      {"name": "noise", "value":0 },
+      {"name": "activity", "value":0 },
+      {"name": "surrounded", "value":0 }
+    ],
+    "factor_kinds":[
+      {"name":"possesion", "value": 0},
+      {"name":"knowledge", "value": 0},
+      {"name":"being", "value": 0},
+      {"name":"location", "value": 0},
+      {"name":"human", "value": 0},
+      {"name":"personal", "value": 0}
+    ],
+    "attack_resilience_values":[]
+  },
+  {
+    "name":"DeviceBased",
+    "privacy":0.0,
+    "quality":0.3,
+    "description":"using a device to identify and verify a user's identity",
+    "url_references":[
+      {
+        "name":"Al-Muhtadi et al.",
+        "value":"https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.13.2802&rep=rep1&type=pdf"
+      },
+      {
+        "name":"Lenzini et al.",
+        "value":"https://www.sciencedirect.com/science/article/pii/S1571066108000595/pdf?md5=c4a77c1dcb0742748c092a006a0d81c6&pid=1-s2.0-S1571066108000595-main.pdf&_valck=1"
+      }
+    ],
+    "deployabilities":[
+      {"name": "accessible", "value":0 }, 
+      {"name": "negligibleCostsPerUser", "value":0 }, 
+      {"name": "serverCompatible", "value":0 }, 
+      {"name": "browserCompatible", "value":0 }, 
+      {"name": "mature", "value":0 },
+      {"name": "nonProprietary", "value":0 }
+    ],
+    "usabilities":[
+      {"name": "memorywiseEffortless", "value":0 }, 
+      {"name": "nothingToCarry", "value":0 }, 
+      {"name": "scalableForUsers", "value":0 }, 
+      {"name": "easyToLearn", "value":0 }, 
+      {"name": "physicallyEffortless", "value":0 },
+      {"name": "efficientToUse", "value":0 },
+      {"name": "infrequentErrors", "value":0 },
+      {"name": "easyRecoveryFromLoss", "value":0 }
+    ],
+    "efficiencies_to_use":[
+      {"name": "darkness", "value":0 },
+      {"name": "noise", "value":0 },
+      {"name": "activity", "value":0 },
+      {"name": "surrounded", "value":0 }
+    ],
+    "factor_kinds":[
+      {"name":"possesion", "value": 0},
+      {"name":"knowledge", "value": 0},
+      {"name":"being", "value": 0},
+      {"name":"location", "value": 0},
+      {"name":"human", "value": 0},
+      {"name":"personal", "value": 0}
+    ],
+    "attack_resilience_values":[]
+  },
+  {
+    "name":"TokenBased",
+    "privacy":0.0,
+    "quality":0.3,
+    "description":"an electronic key that enables a user to authenticate and prove his identity by storing some sort of personal information",
+    "url_references":[
+      {
+        "name":"Al-Muhtadi et al.",
+        "value":"https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.13.2802&rep=rep1&type=pdf"
+      },
+      {
+        "name":"Lenzini et al.",
+        "value":"https://www.sciencedirect.com/science/article/pii/S1571066108000595/pdf?md5=c4a77c1dcb0742748c092a006a0d81c6&pid=1-s2.0-S1571066108000595-main.pdf&_valck=1"
+      },
+      {
+        "name":"Seifert et al.",
+        "value":"https://www.medien.informatik.uni-muenchen.de/pubdb/publications/pub/seifert2010pervasive/seifert2010pervasive.pdf"
+      },
+      {
+        "name":"Fathi et al.",
+        "value":"https://dl.acm.org/doi/pdf/10.1145/2800835.2800906"
+      },
+      {
+        "name":"Bardram et al.",
+        "value":"https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.602.1670&rep=rep1&type=pdf"
+      },
+      {
+        "name":"Stajano et al.",
+        "value":"https://www.repository.cam.ac.uk/bitstream/handle/1810/279126/2011-Stajano-pico.pdf?sequence=1"
+      }
+    ],
+    "deployabilities":[
+      {"name": "accessible", "value":0 }, 
+      {"name": "negligibleCostsPerUser", "value":0 }, 
+      {"name": "serverCompatible", "value":0 }, 
+      {"name": "browserCompatible", "value":0 }, 
+      {"name": "mature", "value":0 },
+      {"name": "nonProprietary", "value":0 }
+    ],
+    "usabilities":[
+      {"name": "memorywiseEffortless", "value":0 }, 
+      {"name": "nothingToCarry", "value":0 }, 
+      {"name": "scalableForUsers", "value":0 }, 
+      {"name": "easyToLearn", "value":0 }, 
+      {"name": "physicallyEffortless", "value":0 },
+      {"name": "efficientToUse", "value":0 },
+      {"name": "infrequentErrors", "value":0 },
+      {"name": "easyRecoveryFromLoss", "value":0 }
+    ],
+    "efficiencies_to_use":[
+      {"name": "darkness", "value":0 },
+      {"name": "noise", "value":0 },
+      {"name": "activity", "value":0 },
+      {"name": "surrounded", "value":0 }
+    ],
+    "factor_kinds":[
+      {"name":"possesion", "value": 0},
+      {"name":"knowledge", "value": 0},
+      {"name":"being", "value": 0},
+      {"name":"location", "value": 0},
+      {"name":"human", "value": 0},
+      {"name":"personal", "value": 0}
+    ],
+    "attack_resilience_values":[]
+  },
+  {
+    "name":"USB",
+    "privacy":0.0,
+    "quality":0.3,
+    "description":"USB security  plugs into the user's computer's USB port to verify it's identity",
+    "url_references":[
+      {
+        "name":"Al-Muhtadi et al.",
+        "value":"https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.13.2802&rep=rep1&type=pdf"
+      }
+    ],
+    "deployabilities":[
+      {"name": "accessible", "value":0 }, 
+      {"name": "negligibleCostsPerUser", "value":0 }, 
+      {"name": "serverCompatible", "value":0 }, 
+      {"name": "browserCompatible", "value":0 }, 
+      {"name": "mature", "value":0 },
+      {"name": "nonProprietary", "value":0 }
+    ],
+    "usabilities":[
+      {"name": "memorywiseEffortless", "value":0 }, 
+      {"name": "nothingToCarry", "value":0 }, 
+      {"name": "scalableForUsers", "value":0 }, 
+      {"name": "easyToLearn", "value":0 }, 
+      {"name": "physicallyEffortless", "value":0 },
+      {"name": "efficientToUse", "value":0 },
+      {"name": "infrequentErrors", "value":0 },
+      {"name": "easyRecoveryFromLoss", "value":0 }
+    ],
+    "efficiencies_to_use":[
+      {"name": "darkness", "value":0 },
+      {"name": "noise", "value":0 },
+      {"name": "activity", "value":0 },
+      {"name": "surrounded", "value":0 }
+    ],
+    "factor_kinds":[
+      {"name":"possesion", "value": 0},
+      {"name":"knowledge", "value": 0},
+      {"name":"being", "value": 0},
+      {"name":"location", "value": 0},
+      {"name":"human", "value": 0},
+      {"name":"personal", "value": 0}
+    ],
+    "attack_resilience_values":[]
+  },
+  {
+    "name":"DigitalCertifications",
+    "privacy":0.0,
+    "quality":0.3,
+    "description":"a file or electronic password that proves the authenticity of a user",
+    "url_references":[
+      {
+        "name":"Bakar et al.",
+        "value":"https://ieeexplore.ieee.org/iel7/6901367/6918164/06918248.pdf?casa_token=81XH1WO7J2YAAAAA:zZtqDmGkECVqp9T0Goi9_5p6BtAifVfZaZmDNM34_MsUGS4jqf_cLvAi6gsseSplqLBMaBOdfxdu"
+      }
+    ],
+    "deployabilities":[
+      {"name": "accessible", "value":0 }, 
+      {"name": "negligibleCostsPerUser", "value":0 }, 
+      {"name": "serverCompatible", "value":0 }, 
+      {"name": "browserCompatible", "value":0 }, 
+      {"name": "mature", "value":0 },
+      {"name": "nonProprietary", "value":0 }
+    ],
+    "usabilities":[
+      {"name": "memorywiseEffortless", "value":0 }, 
+      {"name": "nothingToCarry", "value":0 }, 
+      {"name": "scalableForUsers", "value":0 }, 
+      {"name": "easyToLearn", "value":0 }, 
+      {"name": "physicallyEffortless", "value":0 },
+      {"name": "efficientToUse", "value":0 },
+      {"name": "infrequentErrors", "value":0 },
+      {"name": "easyRecoveryFromLoss", "value":0 }
+    ],
+    "efficiencies_to_use":[
+      {"name": "darkness", "value":0 },
+      {"name": "noise", "value":0 },
+      {"name": "activity", "value":0 },
+      {"name": "surrounded", "value":0 }
+    ],
+    "factor_kinds":[
+      {"name":"possesion", "value": 0},
+      {"name":"knowledge", "value": 0},
+      {"name":"being", "value": 0},
+      {"name":"location", "value": 0},
+      {"name":"human", "value": 0},
+      {"name":"personal", "value": 0}
+    ],
+    "attack_resilience_values":[]
+  }
+]
 
