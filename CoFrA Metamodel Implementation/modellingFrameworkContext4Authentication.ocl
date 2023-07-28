@@ -24,6 +24,8 @@
 		PrivacyCheck: self.contextthreatalgo.threatsituation.threatriskalgo.risk.authenticationmechanism->forAll(a|a.privacy=self.privacy);
 		invariant
 		EnvironmentCheck: self.contextthreatalgo.threatsituation.threatriskalgo.risk.authenticationmechanism ->includesAll(self.environment);
+			
+
 	}
 	class ThreatSituation
 	{
@@ -69,6 +71,10 @@
 		invariant UsabilityCheck: AuthenticationMechanism.allInstances()->select(a|a.factor=0)->asSet().usability<>0;
 		invariant UsabilityCheck2: AuthenticationMechanism.allInstances()->select(a|a.factor=1)->asSet().usability<>1;
 		invariant Specification: self.mechanism->notEmpty();
+		invariant UsabilityOptimization: self.UsabilityKinds->size() >= AuthenticationMechanism.allInstances()->select(oclIsNew()).UsabilityKinds->size();
+		invariant DeployabilityOptimization: self.DeployabilityKinds->size() >= AuthenticationMechanism.allInstances()->select(oclIsNew()).DeployabilityKinds->size();
+		invariant PrivacyOptimization: self.PrivacyKinds->size() >= AuthenticationMechanism.allInstances()->select(oclIsNew()).PrivacyKinds->size();
+		invariant SecurityOptimization: self.SecurityKinds->size() >= AuthenticationMechanism.allInstances()->select(oclIsNew()).SecurityKinds->size();
 	}
 	class AvailableContextInformation extends ContextInformation
 	{
@@ -89,6 +95,7 @@
 		attribute history : Boolean[1];
 		property requiredcontextinformation#contextthreatalgo : RequiredContextInformation[*|1] { ordered };
 		invariant Specification: self.algo->notEmpty();
+		invariant privacySensitivity: let lowestPrivacyLevel = self.requiredContextInformation->sortedBy(ci | ci.privacyLevel)->first() -> lowestPrivacyLevel.privacyLevel < self.privacyLevel;
 	}
 	class ThreatRiskAlgo
 	{
